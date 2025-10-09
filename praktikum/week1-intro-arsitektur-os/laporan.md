@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu [wulan]
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
@@ -7,7 +7,7 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ## Identitas
 - **Nama**  : [Dyah Retno Wulandari]  
 - **NIM**   : [250202934]  
-- **Kelas** : [IKRB]
+- **Kelas** : [IKRB!]
 
 ---
 
