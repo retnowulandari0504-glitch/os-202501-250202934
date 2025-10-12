@@ -242,17 +242,36 @@ perintah dmesg | head adalah perintah Linux untuk melihat pesan kernel sedangkan
 ## Quiz
 1. [Sebutkan tiga fungsi utama sistem operasi]  
    **Jawaban:**  
+   a.	Sistem operasi mengelola proses-proses yang berjalan di komputer
+   
+   b.	Sistem operasi mengelola memori komputer untuk alokasi dan penggunaan yang efisien
+
+   c.	Sistem operasi mengelola perangkat input output (I/O) seperti keyboard, disk, printer
+
 2. [Jelaskan perbedaan antara kernel mode dan user mode]  
-   **Jawaban:**  
+   **Jawaban:** 
+
+    a.Kernel mode punya akses lebih tinggi disbanding user mode
+
+    b.User mode lebih aman, kernel mode lebih rentan jika ada bug
+
+      c.	Aplikasi user mode menggunakan system call untuk meminta layanan kernel
+
 3. [Sebutkan contoh OS dengan arsitektur monolithic dan mickrokenel]  
    **Jawaban:**  
+   a.	Monolithic Kernel ( Contohnya : Linux, Solaris, Windows)
 
+   b.	MicroKernel (Contohnya :  QNX, Mach, Minix)
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
+- Apa bagian yang paling menantang minggu ini? 
+
+Pertama tentunya baru mengenal Github, Visual Code, Ubuntu, Draw id. Saat mengkoneksikan github dan visual code sedikit bingung karena setiap tutorial yang ada di youtube mempunyai caranya masing masing jadi sempat beberapa kali login dan logout.  
+
 - Bagaimana cara Anda mengatasinya?  
+Belajar bersama sama teman-teman dan melihat tutorial dari youtube
 
 ---
 
