@@ -104,9 +104,10 @@ dmesg | head
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
+Sertakan screenshot hasil percobaan:
 ![Screenshot hasil](screenshots/ubuntuW.png)
 
+Sertakan screenshot hasil diagram:
 ![Screenshot hasil](screenshots/diagram1.drawio.png)
 
 ---
