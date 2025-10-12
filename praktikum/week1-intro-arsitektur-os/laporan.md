@@ -56,22 +56,22 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 3. ## Eksperimen Dasar 
 Jalankan perintah berikut di terminal:
 
-   uname -a
+uname -a
 
-   whoami
+whoami
 
-   lsmod | head
+lsmod | head
 
-   dmesg | head
+dmesg | head
 
-   Catat dan analisis modul kernel yang tampil.
+Catat dan analisis modul kernel yang tampil.
 
   
 4. ## Membuat Diagram Arsitektur
 
 ⦁	Buat diagram hubungan antara User → System Call → Kernel → Hardware.
 
-⦁	Gunakan draw.io atau #Mermaid.
+⦁	Gunakan draw.io atau Mermaid.
 
 ⦁	Simpan hasilnya di:
 
@@ -82,15 +82,13 @@ praktikum/week1-intro-arsitektur-os/screenshots/diagram-os.png
 ⦁	Tuliskan hasil pengamatan, analisis, dan kesimpulan ke dalam laporan.md.
 
 ⦁	Tambahkan screenshot hasil terminal ke folder screenshots/.
-
 6. ## Commit & Push
+
 git add .
 
 git commit -m "Minggu 1 - Arsitektur Sistem Operasi dan Kernel"
 
 git push origin main
-
-
 
 ---
 
@@ -106,7 +104,8 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![screenshot/ubuntuW.png](./screenshots/ubuntuW.png)
+![Screenshot hasil](screenshots/ubuntuW.png)
+![Screenshot hasil](screenshots/diagram1.drawio.png)
 
 ---
 
