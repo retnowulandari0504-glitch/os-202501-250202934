@@ -233,7 +233,9 @@ perintah dmesg | head adalah perintah Linux untuk melihat pesan kernel sedangkan
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1.	Berdasarkan hasil percobaan, perintah-perintah seperti uname -a, whoami, lsmod, dan dmesg pada Linux berfungsi untuk menampilkan informasi yang berhubungan langsung dengan kernel, sistem operasi, pengguna, serta perangkat keras. Ada perintah yang bisa digunakan pada kedua sistem operasi dan ada yang tidak
+2.	Linux dan Windows menunjukan kedua sistem operasi memiliki fungsi yang serupa, tetapi cara kerja dan perintahnya berbeda, seperti ver, driverquery pada Windows dan uname -a, lsomd pada Linux
+3.	Linux lebih terbuka dan berorientasi pada kernel (akses langsung ke informasi sistem), sedangkan Windows menggunakan pendekatan yang lebih tertutup. Linux lebih terfokus pada fleksibilitas sedangkan Windows lebih pada kemudahan penggunaan.
 
 ---
 
