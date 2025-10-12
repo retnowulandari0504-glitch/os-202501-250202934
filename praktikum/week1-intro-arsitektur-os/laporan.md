@@ -39,42 +39,56 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.  
 
-Setup Environment
+   Setup Environment
 
-Pastikan Linux (Ubuntu/WSL) sudah terinstal.
+   Pastikan Linux (Ubuntu/WSL) sudah terinstal.
 
-Pastikan Git sudah dikonfigurasi dengan benar:
+   Pastikan Git sudah dikonfigurasi dengan benar:
 
    git config --global user.name "Nama Anda" 
+
    git config --global user.email "email@contoh.com"
 
 
 2. ## Diskusi Konsep
       Baca materi pengantar tentang komponen OS.
+
       Identifikasi komponen yang ada pada Linux/Windows/Android.
 
 3. ## Eksperimen Dasar 
       Jalankan perintah berikut di terminal:
+
       uname -a
+
       whoami
+
       lsmod | head
+
       dmesg | head
+
       Catat dan analisis modul kernel yang tampil.
 
   
 4. ## Membuat Diagram Arsitektur
    ⦁	Buat diagram hubungan antara User → System Call → Kernel → Hardware.
+
    ⦁	Gunakan draw.io atau Mermaid.
+
    ⦁	Simpan hasilnya di:
+
       praktikum/week1-intro-arsitektur-os/screenshots/diagram-os.png
 
 5. ## Penulisan Laporan
       ⦁	Tuliskan hasil pengamatan, analisis, dan kesimpulan ke dalam laporan.md.
+
       ⦁	Tambahkan screenshot hasil terminal ke folder screenshots/.
 
 6. ## Commit & Push
+
       git add .
+
       git commit -m "Minggu 1 - Arsitektur Sistem Operasi dan Kernel"
+
       git push origin main
 
 ---
@@ -92,6 +106,7 @@ dmesg | head
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/ubuntuW.png)
+
 ![Screenshot hasil](screenshots/diagram1.drawio.png)
 
 ---
@@ -99,17 +114,21 @@ Sertakan screenshot hasil percobaan atau diagram:
 ## Analisis
 1.	Makna hasil percobaan
    1.1 uname -a, perintah uname digunakan untuk menampilkan informasi tentang sistem operasi dan kernel yang dicetak
+
    1.2 whoami, perintah whoami digunakan untuk menampilkan nama pengguns ysng sedang login ke sistem
+
    1.3 lsmod | head, perintah lsmod | head digunakan untuk menampilkan daftar modul kernel yang sedang dimuat di sistem Linux
+
    1.4 dmesg | head, perintah dmesg | head digubakan untuk menampilkan pesan-pesan kernel
 
 2.	Hubungan dengan teori (fungsi kernel, system call, arsitektur OS)
+
 2.1 Kernel adalah inti dari sistem operasi yang berfungsi mengelola sumber daya manusia sistem seperti memori, CPU, dan perangkat I/O. Kernel bertanggungjawab atas manajemen proses, memori, dan perangkat keras. Berdasarkan hasil percobaan yang saya lakukan uname -a menampilkan informasi tentang sistem operasi dan kernel yang digunakan. 
 
    retnowulandari0504@LAPTOP-CA0KHU5V:~$ uname -a
    Linux LAPTOP-CA0KHU5V 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
 
-   Berdasarkan kode diatas menunjukkan hasil bahwa perintah uname -a menampilkan nama kernel yang digunakan yaitu Linux, versi kernel linux yang digunakan “6.6.87.2-microsoft-standard-WSL2”. WSL2 artinya sistem Linux ini berjalan di Windows Subsystem for Linux 2 (WSL2). Hasil perintah juga menampilkan nama komputer dan tanggal waktu kompilasi kernel.
+Berdasarkan kode diatas menunjukkan hasil bahwa perintah uname -a menampilkan nama kernel yang digunakan yaitu Linux, versi kernel linux yang digunakan “6.6.87.2-microsoft-standard-WSL2”. WSL2 artinya sistem Linux ini berjalan di Windows Subsystem for Linux 2 (WSL2). Hasil perintah juga menampilkan nama komputer dan tanggal waktu kompilasi kernel.
 
 2.2 System call adalah antarmuka antara pengguna dan kernel.
 whoami digunakan untuk mendapatkan informasi atau melakukan operasi tertentu. Berdasarkan hasil percobaan yang saya lakukan whoami menampilkan informasi identitas pengguna yang sedang login.
@@ -149,6 +168,7 @@ lsmod | head menampilkan modul-modul kernel yang sedang dimuat.
 
 3.	Perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)
 Untuk menampilkan informasi tentang sistem operasi dan kernel yang digunakan pada windows menggunakan ver sedangkan pada linux menggunakan uname -a
+
 3.1 uname -a (Linux)
 
    retnowulandari0504@LAPTOP-CA0KHU5V:~$ uname -a
@@ -161,6 +181,7 @@ Untuk menampilkan informasi tentang sistem operasi dan kernel yang digunakan pad
    Microsoft Windows [Version 10.0.26100.6725]
 
    percobaan menggunakan perintah uname -a pada windows tidak bisa dilakukan
+
    C:\Users\LENOVO>uname -a
    'uname' is not recognized as an internal or external command,
    operable program or batch file. 
@@ -211,6 +232,7 @@ Dst…
    operable program or batch file.
 
 3.4 dmesg | head (Linux) vs (Windows) 
+
 Perintah dmesg | head adalah perintah Linux untuk melihat pesan kernel sedangkan pada windows tidak ada perintah tunggal seperti dmesg. Pada windows ada beberapa cara untuk melihat log sistem yang mirip dengan fungsi dmesg pada Linux misalnya dengan membuka Event Viewer di pencarian Windows.
 
 
@@ -226,33 +248,29 @@ Perintah dmesg | head adalah perintah Linux untuk melihat pesan kernel sedangkan
 ## Quiz
 1. [Sebutkan tiga fungsi utama sistem operasi]  
    **Jawaban:**  
-   a.	Sistem operasi mengelola proses-proses yang berjalan di komputer
-   
-   b.	Sistem operasi mengelola memori komputer untuk alokasi dan penggunaan yang efisien
 
-   c.	Sistem operasi mengelola perangkat input output (I/O) seperti keyboard, disk, printer
+      (1) Sistem operasi mengelola proses-proses yang berjalan di komputer
+
+      (2) Sistem operasi mengelola memori komputer untuk alokasi dan penggunaan yang efisien
+
+      (3) Sistem operasi mengelola perangkat input output (I/O) seperti keyboard, disk, printer
 
 2. [Jelaskan perbedaan antara kernel mode dan user mode]  
    **Jawaban:** 
-
-    a.Kernel mode punya akses lebih tinggi disbanding user mode
-
-    b.User mode lebih aman, kernel mode lebih rentan jika ada bug
-
-      c.	Aplikasi user mode menggunakan system call untuk meminta layanan kernel
+   Kernel mode punya akses lebih tinggi disbanding user mode. Tetapi User mode lebih aman digunakan, sedangkan kernel mode lebih rentan jika ada bug. Aplikasi user mode menggunakan system call untuk meminta layanan kernel
 
 3. [Sebutkan contoh OS dengan arsitektur monolithic dan mickrokenel]  
    **Jawaban:**  
-   a.	Monolithic Kernel ( Contohnya : Linux, Solaris, Windows)
+   Monolithic Kernel ( Contohnya : Linux, Solaris, Windows)
 
-   b.	MicroKernel (Contohnya :  QNX, Mach, Minix)
+   MicroKernel (Contohnya :  QNX, Mach, Minix)
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini? 
 
-Pertama tentunya baru mengenal Github, Visual Code, Ubuntu, Draw id. Saat mengkoneksikan github dan visual code sedikit bingung karena setiap tutorial yang ada di youtube mempunyai caranya masing masing jadi sempat beberapa kali login dan logout.  
+   Pertama tentunya baru mengenal Github, Visual Code, Ubuntu, Draw id. Saat mengkoneksikan github dan visual code sedikit bingung karena setiap tutorial yang ada di youtube mempunyai caranya masing masing jadi sempat beberapa kali login dan logout.  
 
 - Bagaimana cara Anda mengatasinya?  
 Belajar bersama sama teman-teman dan melihat tutorial dari youtube
