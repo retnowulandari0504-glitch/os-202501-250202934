@@ -32,6 +32,8 @@ Mahasiswa juga diperkenalkan pada:
 ⦁	Perbandingan model arsitektur OS seperti monolithic kernel, layered approach, dan microkernel.
 
 Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informasi kernel dan modul aktif.
+
+
 ---
 
 ## Langkah Praktikum
