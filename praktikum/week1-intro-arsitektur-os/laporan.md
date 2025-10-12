@@ -71,7 +71,7 @@ Jalankan perintah berikut di terminal:
 
 ⦁	Buat diagram hubungan antara User → System Call → Kernel → Hardware.
 
-⦁	Gunakan draw.io atau Mermaid.
+⦁	Gunakan draw.io atau #Mermaid.
 
 ⦁	Simpan hasilnya di:
 
@@ -106,7 +106,7 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![screenshot/ubuntuW.png](/screenshots/)
+![screenshot/ubuntuW.png](screenshots/example.png)
 
 ---
 
