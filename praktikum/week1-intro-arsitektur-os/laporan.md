@@ -45,9 +45,9 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 
    Pastikan Git sudah dikonfigurasi dengan benar:
 
-   git config --global user.name "Nama Anda" 
+         git config --global user.name "Nama Anda" 
 
-   git config --global user.email "email@contoh.com"
+         git config --global user.email "email@contoh.com"
 
 
 2. ## Diskusi Konsep
@@ -58,13 +58,13 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 3. ## Eksperimen Dasar 
       Jalankan perintah berikut di terminal:
 
-      uname -a
+         uname -a
 
-      whoami
+         whoami
 
-      lsmod | head
+         lsmod | head
 
-      dmesg | head
+         dmesg | head
 
       Catat dan analisis modul kernel yang tampil.
 
@@ -76,7 +76,7 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 
    ⦁	Simpan hasilnya di:
 
-      praktikum/week1-intro-arsitektur-os/screenshots/diagram-os.png
+       praktikum/week1-intro-arsitektur-os/screenshots/diagram-os.png
 
 5. ## Penulisan Laporan
       ⦁	Tuliskan hasil pengamatan, analisis, dan kesimpulan ke dalam laporan.md.
@@ -85,11 +85,11 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 
 6. ## Commit & Push
 
-      git add .
+         git add .
 
-      git commit -m "Minggu 1 - Arsitektur Sistem Operasi dan Kernel"
+         git commit -m "Minggu 1 - Arsitektur Sistem Operasi dan Kernel"
 
-      git push origin main
+         git push origin main
 
 ---
 
