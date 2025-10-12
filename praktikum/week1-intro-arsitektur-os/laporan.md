@@ -38,10 +38,9 @@ Eksperimen akan dilakukan menggunakan perintah dasar Linux untuk melihat informa
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.  
- 
-   Setup Environment
-   Pastikan Linux (Ubuntu/WSL) sudah terinstal.
-   Pastikan Git sudah dikonfigurasi dengan benar:
+Setup Environment
+Pastikan Linux (Ubuntu/WSL) sudah terinstal.
+Pastikan Git sudah dikonfigurasi dengan benar:
 
    git config --global user.name "Nama Anda"
    git config --global user.email "email@contoh.com"
