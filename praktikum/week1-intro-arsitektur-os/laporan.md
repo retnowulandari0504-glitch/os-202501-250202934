@@ -111,7 +111,7 @@ Sertakan screenshot hasil percobaan:
 
 Sertakan screenshot hasil diagram:
 
-![Screenshot hasil](screenshots/diagram1.drawio.png)
+![Screenshot hasil](screenshots/diagram-os.png)
 
 ---
 
