@@ -137,23 +137,24 @@ whoami digunakan untuk mendapatkan informasi atau melakukan operasi tertentu. Be
 
          retnowulandari0504@LAPTOP-CA0KHU5V:~$ whoami
 
-          retnowulandari0504
+         retnowulandari0504
 
-2.3 Arsitektur OS
-Sistem operasi Linux memiliki arsitektur monilitik dimana kernel berjalan dalam mode kernel (kernel space) dengan akses langsung ke hardware.
+      2.3 Arsitektur OS
+
+      Sistem operasi Linux memiliki arsitektur monilitik dimana kernel berjalan dalam mode kernel (kernel space) dengan akses langsung ke hardware.
 lsmod | head menampilkan modul-modul kernel yang sedang dimuat.
 
-    retnowulandari0504@LAPTOP-CA0KHU5V:~$ lsmod | head
-      Module                  Size  Used by
-      intel_rapl_msr         16384  0
-      intel_rapl_common      32768  1 intel_rapl_msr
-      kvm_intel             356352  0
-      kvm                   970752  1 kvm_intel
-      irqbypass              12288  1 kvm
-      crc32c_intel           16384  0
-      battery                20480  0
-      ac                     16384  0
-      sch_fq_codel           16384  1
+         retnowulandari0504@LAPTOP-CA0KHU5V:~$ lsmod | head
+         Module                  Size  Used by
+         intel_rapl_msr         16384  0
+         intel_rapl_common      32768  1 intel_rapl_msr
+         kvm_intel             356352  0
+         kvm                   970752  1 kvm_intel
+         irqbypass              12288  1 kvm
+         crc32c_intel           16384  0
+         battery                20480  0
+         ac                     16384  0
+         sch_fq_codel           16384  1
 
    dmesg | head menampilkan pesan-pesan dari ring buffer kernel. 
 
