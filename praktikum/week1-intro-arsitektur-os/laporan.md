@@ -106,7 +106,7 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![screenshot/ubuntuW.png](screenshots/example.png)
+![screenshot/ubuntuW.png](./screenshots/ubuntuW.png)
 
 ---
 
