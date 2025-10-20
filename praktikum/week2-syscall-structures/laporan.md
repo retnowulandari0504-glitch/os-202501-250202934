@@ -1,6 +1,14 @@
-# Tugas Praktikum Minggu 2  
-Topik: Struktur System Call dan Fungsi Kernel  
 
+# Laporan Praktikum Minggu [2]
+Topik:  "Arsitektur Sistem Operasi dan Kernel"]
+
+---
+
+## Identitas
+- **Nama**  : [Dyah Retno Wulandari]  
+- **NIM**   : [NIM Mahasiswa]  
+- **Kelas** : [Kelas]
+ 
 ---
 
 ## A. Deskripsi Singkat
