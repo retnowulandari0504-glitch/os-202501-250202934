@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu [2]
-Topik:  "Arsitektur Sistem Operasi dan Kernel"]
+Topik:  "Syscall Structure"]
 
 ---
 
