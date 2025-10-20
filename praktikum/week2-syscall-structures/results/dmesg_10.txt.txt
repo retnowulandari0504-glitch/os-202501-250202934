@@ -1,0 +1,11 @@
+retnowulandari0504@LAPTOP-CA0KHU5V:~$ dmesg | tail -n 10
+[    4.808918] Failed to connect to bus: No such file or directory
+[    5.515854] systemd-journald[64]: Received client request to flush runtime journal.
+[    5.594619] systemd-journald[64]: File /var/log/journal/e206ea8eeea7410589a4045a40b37b23/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    6.085019] ACPI: AC: AC Adapter [AC1] (off-line)
+[    6.392752] ACPI: battery: Slot [BAT1] (battery present)
+[    6.955233] kvm_intel: Using Hyper-V Enlightened VMCS
+[    7.261641] intel_rapl_msr: PL4 support detected.
+[   13.405269] WSL (215) ERROR: CheckConnection: getaddrinfo() failed: -3
+[   18.411759] WSL (215) ERROR: CheckConnection: getaddrinfo() failed: -3
+[   48.411602] hv_balloon: Max. dynamic memory size: 3994 MB
