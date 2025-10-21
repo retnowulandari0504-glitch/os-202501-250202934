@@ -64,7 +64,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    - Gunakan draw.io / mermaid.
    - Simpan di:
      ```
-     [Screenshots hasil](screenshots/diagram_week2.png)
+     praktikum/week2-syscall-structure/screenshots/syscall-diagram.png
 
      ```
 
