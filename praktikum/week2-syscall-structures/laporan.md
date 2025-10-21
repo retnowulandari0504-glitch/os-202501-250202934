@@ -43,7 +43,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    strace ls
    ```
    > Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.  
-   Simpan hasil analisis ke `results/syscall_ls.txt`.
+   Simpan hasil analisis ke `results/syscall_ls.txt.txt`.
 
 3. **Eksperimen 2 – Menelusuri System Call File I/O**
    Jalankan:
