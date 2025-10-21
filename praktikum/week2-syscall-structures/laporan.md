@@ -134,8 +134,7 @@ Aktivitas system call dapat dipantau menggunakan alat seperti strace atau auditd
 
 -	Control akses, OS menerapkan control akses wajib melalui kebijakan seperti Linux yang membatasi hak Istimewa bahkan untuk proses di mode kernel sehingga mengurangi resika hak istimewa
 
-# Sebutkan contoh system
- call yang sering digunakan di Linux.  
+# Sebutkan contoh system call yang sering digunakan di Linux.  
 Kontrol Proses
 
 •	fork(): Membuat proses baru yang merupakan salinan dari proses yang memanggilnya. Ini adalah dasar untuk menjalankan program baru.
