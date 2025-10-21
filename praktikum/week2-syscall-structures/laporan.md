@@ -65,7 +65,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    - Simpan di:
      ```
      praktikum/week2-syscall-structure/screenshots/syscall-diagram.png
-
+   ![Screenshot hasil](screenshots/syscall-diagram.png)
      ```
 
 6. **Commit & Push**
