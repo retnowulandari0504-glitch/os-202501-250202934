@@ -51,6 +51,28 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    strace -e trace=open,read,write,close cat /etc/passwd
    ```
    > Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
+   Jawab:
+  - Membuka file (open)
+
+   Kernel menerima permintaan dari program cat untuk membuka file /etc/passwd.
+Kernel mencari file tersebut di sistem berkas, membuat file descriptor (biasanya nomor 3), lalu mengembalikannya ke proses.
+
+
+- Membaca file (read)
+
+Program cat meminta kernel membaca isi file melalui read(fd, buffer, size).
+Kernel menyalin data dari page cache atau langsung dari disk ke memori proses, lalu mengembalikan jumlah byte yang dibaca (misalnya 1502 byte).
+
+- Menulis ke layar (write)
+
+Data hasil baca dikirim ke stdout (layar terminal) dengan write(1, buffer, size).
+Kernel menyalin data dari memori proses ke perangkat terminal.
+
+- Menutup file (close)
+
+Setelah selesai, program memanggil close(fd).
+Kernel menandai bahwa file descriptor tersebut tidak dipakai lagi dan melepaskan sumber dayanya.
+
 
 4. **Eksperimen 3 – Mode User vs Kernel**
    Jalankan:
@@ -59,13 +81,15 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    ```
    > Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
 
+   Jawab : Output dmesg seperti yang kamu tampilkan berisi pesan internal dari kernel Linux tentang aktivitas sistem, sedangkan output program biasa adalah hasil dari program yang dijalankan oleh pengguna di user space, seperti menampilkan file atau teks.
+
+
 5. **Diagram Alur System Call**
    - Buat diagram yang menggambarkan alur eksekusi system call dari program user hingga kernel dan kembali lagi ke user mode.
    - Gunakan draw.io / mermaid.
    - Simpan di:
      ```
      praktikum/week2-syscall-structure/screenshots/syscall-diagram.png
-   ![Screenshot hasil](screenshots/syscall-diagram.png)
      ```
 
 6. **Commit & Push**
@@ -79,8 +103,10 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ## D. Tugas & Quiz
 ### Tugas
-1. Dokumentasikan hasil eksperimen `strace` dan `dmesg` dalam bentuk tabel observasi.  
+1. Dokumentasikan hasil eksperimen `strace` dan `dmesg` dalam bentuk tabel observasi. 
+[Screenshot hasil](week2-syscall-structures/tugas1.png)
 2. Buat diagram alur system call dari aplikasi → kernel → hardware → kembali ke aplikasi.  
+![Screenshot hasil](screenshots/syscall-diagram.png)
 3. Tulis analisis 400–500 kata tentang:
    # Mengapa system call penting untuk keamanan OS?  
  - Karena berfungsi sebagai gerbang penghubung antara program pengguna (user space) dan inti sistem operasi (kernel space). System call adalah mekanisme keamanan utama yang memastikan setiap interaksi antara program dan kernel berlangsung terkendali, tervalidasi, dan tercatat, sehingga melindungi OS dari penyalahgunaan atau serangan dari aplikasi pengguna.
