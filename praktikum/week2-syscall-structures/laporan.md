@@ -104,7 +104,7 @@ Kernel menandai bahwa file descriptor tersebut tidak dipakai lagi dan melepaskan
 ## D. Tugas & Quiz
 ### Tugas
 1. Dokumentasikan hasil eksperimen `strace` dan `dmesg` dalam bentuk tabel observasi. 
-[tugas1.png]
+![Screenshot hasil](screenshots/tugas1.png)
 2. Buat diagram alur system call dari aplikasi → kernel → hardware → kembali ke aplikasi.  
 ![Screenshot hasil](screenshots/syscall-diagram.png)
 3. Tulis analisis 400–500 kata tentang:
