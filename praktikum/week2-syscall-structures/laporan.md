@@ -64,7 +64,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    - Gunakan draw.io / mermaid.
    - Simpan di:
      ```
-     [Screenshot hasil](screenshots/diagram_week2.png)
+     [Screenshots hasil](screenshots/diagram_week2.png)
 
      ```
 
