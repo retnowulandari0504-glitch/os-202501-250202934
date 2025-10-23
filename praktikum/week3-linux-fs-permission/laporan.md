@@ -95,14 +95,36 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ### Tugas
 1. Dokumentasikan hasil seluruh perintah pada tabel observasi di `laporan.md`.  
 2. Jelaskan fungsi tiap perintah dan arti kolom permission (`rwxr-xr--`).  
+Jawab :
+ 
+ - rwx :	User (pemilik file)	Bisa membaca (r), menulis (w), dan menjalankan (x) file
+
+- r-x	 : Group (kelompok pengguna)	Bisa membaca dan menjalankan, tapi tidak bisa mengubah file
+
+- r-- : Others (pengguna lain)	Hanya bisa membaca, tidak bisa menulis atau menjalankan
+
+
 3. Analisis peran `chmod` dan `chown` dalam keamanan sistem Linux.  
+Jawab :
+   - `chmod` berfungsi mengontrol hak akses (read, writer, execute) sehingga hanya pengguna yang berwenang dapat membaca, mengubah, atau menjalankan file.
+   - `chown` berfungsi memastikan file atau direktori dimiliki oleh pengguna dan grup yang  benar,mencegah akses atau manipulasi oleh pihak yang tidak berhak.
+
 4. Upload hasil dan laporan ke repositori Git sebelum deadline.
 
 ### Quiz
 Tuliskan jawaban di bagian **Quiz** pada laporan:
 1. Apa fungsi dari perintah `chmod`?  
+   Jawab : `chmod` berfungsi untuk menetukan siapa yang boleh membaca, menulis, atau mengeksekusi suatu file/direktori
 2. Apa arti dari kode permission `rwxr-xr--`?  
+   Jawab : `rwxr-xr--` berarti :
+
+      - Pemilik (user) memiliki izin penuh : membaca, menulis, dan mengeksekusi file
+      - Grup hanya dapat membaca dan mengeksekusi tetapi bisa dapat mengubah dapat mengubah file
+      - Pengguna lain (others) hanyabdapat membaca file saja
 3. Jelaskan perbedaan antara `chown` dan `chmod`.  
+Jawab :
+   - `chown` digunakan untuk mengubah kepemilikan file atau direktori (siapa pemilik dan grupnya)
+   - `chmod` digunakan untuk mengubah izin akses file atau direktori (siapa yang boleh membaca, menulis, atau mengeksekusi)
 
 ---
 
