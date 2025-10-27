@@ -55,22 +55,45 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 <html>
 <head>
 <body>
+<table>
 <tr>
    <th>Perintah</th>
    <th>Hasil</th>
    <th>Penjelasan</th>
 </tr>
+<tr>
+   <td>pwd</td>
+   <td>retnowulandari0504@LAPTOP-CA0KHU5V:~$ pwd
+/home/retnowulandari0504</td>
+   <td>untuk menampilkan direktori kerja saat diterminal</td>
+</tr>
+<tr>
+   <td>ls -l</td>
+   <td>retnowulandari0504@LAPTOP-CA0KHU5V:~$ ls -l
+total 0</td>
+<td>total 0 menunjukkan bawa tidak ada file atau folder didalam direktori saat ini</td>
+</tr>
+   <td>cd /tmp</td>
+   <td>
+retnowulandari0504@LAPTOP-CA0KHU5V:~$ cd /tmp</td>
+   <td>Untuk berpindah ke direktori lain yaitu berpindah ke direktori /tmp</td>
+</tr>
+<tr>
+   <td>ls -a</td>
+   <td>retnowulandari0504@LAPTOP-CA0KHU5V:/tmp$ ls -a
+   
+.                 systemd-private-bb084cceb8684b5e810305794a461624-systemd-logind.service-DeoYCK
+
+..                systemd-private-bb084cceb8684b5e810305794a461624-systemd-resolved.service-k0giK1
+
+.X11-unix         systemd-private-bb084cceb8684b5e810305794a461624-systemd-timesyncd.service-cQutAU
+snap-private-tmp</td>
+   <td>Menunjukan direktori saat ini (/tmp), menunjukkan direktori induk yaitu (/), dan folder khusus untuk komunikasi antarproses gratis (layanan X11 pada sistem Linux)</td>
+</table>
 </body>
 </head>
 </html>
-- pwd digunakan untuk menampilkan direktori kerja saat diterminal
-
-- ls -l digunakan 
-
-- cd /tmp digunakan untuk berpindah ke direktori lain di sistem file
-
-- ls -a digunakan untuk menampilkan semua file (termasuk fileyang tersembunyi)
-      
+ 
    - Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
 
 3. **Eksperimen 2 – Membaca File**
