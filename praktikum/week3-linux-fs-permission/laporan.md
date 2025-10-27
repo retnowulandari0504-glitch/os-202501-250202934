@@ -98,7 +98,7 @@ snap-private-tmp</td>
 
 Jawab :
 
-  -Direktori aktif : /tmp
+  - Direktori aktif : /tmp
   - Isi folder : berisi beberapa folder sementara milik layanan sistem
   - File tersembunyi : . , .., dan X11-unix    
    
@@ -121,7 +121,7 @@ Jawab :
    - Home Directory : Lokasi direktori utama user
    
    - Login Shell : Program shell yang dijalankan saat user
-   
+
 
 4. **Eksperimen 3 – Permission & Ownership**
    Buat file baru:
