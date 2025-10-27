@@ -260,7 +260,20 @@ Ini meningkatkan keamanan file pribadi.
    - Ambil screenshot hasil terminal dan simpan di:
      ```
      praktikum/week3-linux-fs-permission/screenshots/
+
      ```
+     Eksperimen1
+     ![Screenshot hasil](screenshots/Eksperimen1.png)
+
+     Eksperimen2
+     ![Screenshot hasil](screenshots/Eksperimen2.png)
+
+     Eksperimen3
+     ![Screenshot hasil](screenshots/Eksperimen3.png)
+
+     Eksperimen4
+     ![Screenshot hasil](screenshots/Eksperimen4.png)
+
    - Tambahkan analisis hasil pada `laporan.md`.
 
 6. **Commit & Push**
