@@ -190,12 +190,70 @@ Jawab :
    ls -l percobaan.txt
    ```
    - Analisis perbedaan sebelum dan sesudah chmod.  
-   - Ubah pemilik file (jika memiliki izin sudo):
+      Sebelum chmod
+
+      retnowulandari0504@LAPTOP-CA0KHU5V:~$ ls -l percobaan.txt
+
+         -rw-r--r-- 1 retnowulandari0504 retnowulandari0504 38 Oct 27 20:53 percobaan.txt
+      
+      Penjelasan :
+
+  - -rw-r--r-- → izin akses file (permissions)
+
+- → menandakan ini file biasa, bukan direktori.
+
+- rw- → owner (pemilik) bisa membaca dan menulis.
+
+- r-- → group hanya bisa membaca.
+
+- r-- → others (user lain) juga hanya bisa membaca.
+
+- 1 → jumlah link ke file.
+
+- retnowulandari0504 → pemilik file (owner).
+
+- retnowulandari0504 → grup file (group).
+
+- 38 → ukuran file dalam byte.
+
+- Oct 27 20:53 → waktu terakhir file diubah.
+
+- percobaan.txt → nama file.
+
+   Setelah chmod
+
+      retnowulandari0504@LAPTOP-CA0KHU5V:~$ ls -l percobaan.txt
+
+         -rw------- 1 retnowulandari0504 retnowulandari0504 38 Oct 27 20:53 percobaan.txt
+
+   Penjelasan :
+
+- rw------- artinya:
+
+- Owner: boleh membaca dan menulis (rw-).
+
+- Group: tidak punya izin (---).
+
+- Others: tidak punya izin (---).
+
+Kesimpulan : 
+
+Sebelum diubah, file dapat dibaca oleh semua orang (owner, group, dan others). Sedangkan setelah chmod  hanya pemilik file yang bisa membuka atau mengedit file.
+User lain tidak bisa membaca maupun menulis ke file tersebut.
+Ini meningkatkan keamanan file pribadi.
+      
+- Ubah pemilik file (jika memiliki izin sudo):
    ```bash
    sudo chown root percobaan.txt
    ls -l percobaan.txt
    ```
-   - Catat hasilnya.
+- Catat hasilnya.
+
+      retnowulandari0504@LAPTOP-CA0KHU5V:~$ sudo chown root percobaan.txt
+
+      [sudo] password for retnowulandari0504:
+      retnowulandari0504@LAPTOP-CA0KHU5V:~$ ls -l percobaan.txt
+      -rw------- 1 root retnowulandari0504 38 Oct 27 20:53 percobaan.txt
 
 5. **Eksperimen 4 – Dokumentasi**
    - Ambil screenshot hasil terminal dan simpan di:
