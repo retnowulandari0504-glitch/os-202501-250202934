@@ -50,6 +50,27 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    ls -a
    ```
    - Jelaskan hasil tiap perintah.
+      
+      Jawab: 
+<html>
+<head>
+<body>
+<tr>
+   <th>Perintah</th>
+   <th>Hasil</th>
+   <th>Penjelasan</th>
+</tr>
+</body>
+</head>
+</html>
+- pwd digunakan untuk menampilkan direktori kerja saat diterminal
+
+- ls -l digunakan 
+
+- cd /tmp digunakan untuk berpindah ke direktori lain di sistem file
+
+- ls -a digunakan untuk menampilkan semua file (termasuk fileyang tersembunyi)
+      
    - Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
 
 3. **Eksperimen 2 – Membaca File**
