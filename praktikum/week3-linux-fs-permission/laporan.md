@@ -96,6 +96,13 @@ snap-private-tmp</td>
  
    - Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
 
+Jawab :
+
+  -Direktori aktif : /tmp
+  - Isi folder : berisi beberapa folder sementara milik layanan sistem
+  - File tersembunyi : . , .., dan X11-unix    
+   
+
 3. **Eksperimen 2 – Membaca File**
    Jalankan perintah:
    ```bash
