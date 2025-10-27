@@ -122,9 +122,67 @@ Jawab :
    
    - Login Shell : Program shell yang dijalankan saat user
 
-
+<html>
+<head>
+<body>
+   <table>
+   <tr>
+   <th>No</th>
+   <th>Username</th>
+   <th>UID</th>
+   <th>GID</th>
+   <th>Home Directory</th>
+   <th>Shell</th>
+   <th>Keterangan</th>
+   </tr>
+   <tr>
+   <td> 1 </td>
+   <td>root</td>
+   <td>0</td>
+   <td>0</td>
+   <td>/root</td>
+   <td>/bin/bash</td>
+   <td>Akun superuser (administrator sistem) dengan hak penuh.</td>
+   </tr>
+   <td> 2 </td>
+     <td>daemon</td>
+   <td>1</td>
+   <td>1</td>
+   <td>/usr/sbin</td>
+   <td>/usr/sbin/nologin</td>
+   <td>Akun sistem untuk layanan background (daemon, tidak bisa login.)</td>
+   </tr>
+   <td> 3 </td>
+   <td>bin</td>
+   <td>2</td>
+   <td>2</td>
+   <td>/bin</td>
+   <td>/usr/sbin/nologin</td>
+   <td>Akun sistem yang menunjukkan file biner penting.</td>
+   </tr>
+   <td> 4 </td>
+   <td>sys</td>
+   <td>3</td>
+   <td>3</td>
+   <td>/dev</td>
+   <td>/usr/sbin/nologin</td>
+   <td>Akun sistem yang menangani perangkat (device system).</td>
+   <tr>
+   <td> 5 </td>
+   <td>sync</td>
+   <td>4</td>
+   <td>65534</td>
+   <td>/bin</td>
+   <td>/bin/sync</td>
+   <td>Akun sistem khusus untuk menjalankan perintah sync (sinkronisasi data ke disk). Tidak bisa login interaktif 
+   </tr>
+      </table>
+</body>
+</head>
+</html>
 4. **Eksperimen 3 – Permission & Ownership**
    Buat file baru:
+
    ```bash
    echo "Hello <NAME><NIM>" > percobaan.txt
    ls -l percobaan.txt
