@@ -190,16 +190,16 @@ Jawab :
    chmod 600 percobaan.txt
    ls -l percobaan.txt
    ```
-   - Analisis perbedaan sebelum dan sesudah chmod.  
-      Sebelum chmod
+- Analisis perbedaan sebelum dan sesudah chmod.  
+      **Sebelum chmod**
 
       retnowulandari0504@LAPTOP-CA0KHU5V:~$ ls -l percobaan.txt
 
-         -rw-r--r-- 1 retnowulandari0504 retnowulandari0504 38 Oct 27 20:53 percobaan.txt
+       -rw-r--r-- 1 retnowulandari0504 retnowulandari0504 38 Oct 27 20:53 percobaan.txt
       
-      Penjelasan :
+   Penjelasan :
 
-  - -rw-r--r-- → izin akses file (permissions)
+- -rw-r--r-- → izin akses file (permissions)
 
 - → menandakan ini file biasa, bukan direktori.
 
@@ -221,11 +221,11 @@ Jawab :
 
 - percobaan.txt → nama file.
 
-   Setelah chmod
+**Setelah chmod**
 
       retnowulandari0504@LAPTOP-CA0KHU5V:~$ ls -l percobaan.txt
 
-         -rw------- 1 retnowulandari0504 retnowulandari0504 38 Oct 27 20:53 percobaan.txt
+       -rw------- 1 retnowulandari0504 retnowulandari0504 38 Oct 27 20:53 percobaan.txt
 
    Penjelasan :
 
