@@ -108,7 +108,20 @@ Jawab :
    ```bash
    cat /etc/passwd | head -n 5
    ```
-   - Jelaskan isi file dan struktur barisnya (user, UID, GID, home, shell).
+- Jelaskan isi file dan struktur barisnya (user, UID, GID, home, shell).
+   
+   Jawab : 
+
+   - Username : Nama pengguna (contoh: root, daemon)
+   - Password placeholder : biasanya berisi x, artinya password disimpan terenkripsi di file /etc/ shadow
+   - UID (User ID) : Nomor identitas unik untuk user
+   
+   - GID (Group ID) : Nomor identitas grup utama user
+   - User info/ Comment/ GECOS : Deskripsi singkat tentang user
+   - Home Directory : Lokasi direktori utama user
+   
+   - Login Shell : Program shell yang dijalankan saat user
+   
 
 4. **Eksperimen 3 – Permission & Ownership**
    Buat file baru:
