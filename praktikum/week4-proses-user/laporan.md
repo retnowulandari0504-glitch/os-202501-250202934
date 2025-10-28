@@ -264,8 +264,8 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
      ```
      praktikum/week4-proses-user/screenshots/top.png
 
-     ![Screenshot hasil](screenshots/top.png)
-     
+   ![Screenshot hasil](screenshots/top.png)
+
      ```
 
 4. **Eksperimen 3 – Kontrol Proses**
