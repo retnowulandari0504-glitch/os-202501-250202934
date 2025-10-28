@@ -349,6 +349,7 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
    Jawab :
+   
    Ekperimen 1
    ![Screenshot hasil](screenshots/eksperimen14.png)
 
