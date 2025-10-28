@@ -102,14 +102,38 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.  
-3. Jelaskan hubungan antara user management dan keamanan sistem Linux.  
+3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
+
+   Jawab :  Hubungan antara user management dan keamanan sistem linux   adalah pengelolaan pengguna yang baik menjadi kunci utama dalam menjaga keamanan sistem. User management berperan langsung dalam mencegah penyalahgunaan, menlindungi data dan menjaga stabilitas serta integritas sistem Linux  
 4. Upload laporan ke repositori Git tepat waktu.
 
 ### Quiz
 Tuliskan jawaban di bagian **Quiz** pada laporan:
-1. Apa fungsi dari proses `init` atau `systemd` dalam sistem Linux?  
-2. Apa perbedaan antara `kill` dan `killall`?  
+1. Apa fungsi dari proses `init` atau `systemd` dalam sistem Linux? 
+
+   Jawab :
+
+   •	Menginisialisasi sistem 
+
+   •	Menjalankan layanan
+
+   •	Mengatur urutan boot
+
+   •	Mengelola proses
+
+   •	Menangani shutdown dan reboot
+
+2. Apa perbedaan antara `kill` dan `killall`? 
+
+   Jawab : 
+
+   •	`kill`  digunakan untuk menghentikan proses berdasarkan PID dan lebih spesifik karena mengarah langsung ke PID tertentu
+
+   • `killall`	 digunakan untuk menghentikan proses berdasarkan nama proses dan menghenttikan semua proses dengan nama yang cocok
+
 3. Mengapa user `root` memiliki hak istimewa di sistem Linux?
+
+   Jawab : Karena user root  berfungsi sebagai pengendali penuh sistem Linux — bertanggung jawab atas konfigurasi, keamanan, dan pemeliharaan sistem.
 
 ---
 
