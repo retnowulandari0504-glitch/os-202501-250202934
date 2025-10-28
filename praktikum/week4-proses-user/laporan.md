@@ -71,7 +71,7 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
 - Groups (keanggotaan grup)
 
 <html>
-<head>
+<head></head>
 <body>
    <table>
    <tr>
@@ -90,12 +90,9 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
    <td>groups</td>
    <td>Menampilkan semua grup yang diikuti oleh user, beserta ID dan namanya. Tiap grup memberi hak akses tertentu</td>
    </table>
-   </body>
+
    
    Berikut makna tiap grup: 
-<html>
-<head>
-<body>
    <table>
    <tr>
    <th>ID Grup</th>
@@ -158,16 +155,14 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
    <td>Mengakses atau mengatur perangkat jaringan (Wi-Fi, LAN)</td>
    </tr>
    </table>
-   </body>
+
 
    - Groups digunakan untuk menampilkan daftar grup yang diikuti oleh user tertentu.
 
    Jika dijalankan tanpa argumen (groups saja), maka akan menampilkan grup dari user yang sedang login.
-   
+
    Jika disertai nama user (groups retnowulandari0504), maka akan menampilkan grup milik user tersebut.
-<html>
-<head>
-<body>
+
    <table>
    <tr>
    <th>Nama Grup</th>
@@ -218,6 +213,7 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
    <td>Izin mengelola perangkat jaringan (Wi-Fi, Ethernet,dsbS)</td>
    </table>
    </body>
+</html>
 
    - Buat user baru (jika memiliki izin sudo):
      ```bash
