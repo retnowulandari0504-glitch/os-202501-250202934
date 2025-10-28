@@ -225,6 +225,9 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
          praktikan@LAPTOP-CA0KHU5V:~$ whoami
          praktikan
 
+
+      ![Screenshot hasil](screenshots/userbaru.png)
+
 3. **Eksperimen 2 – Monitoring Proses**
    Jalankan:
    ```bash
@@ -349,7 +352,7 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
    Jawab :
-   
+
    Ekperimen 1
    ![Screenshot hasil](screenshots/eksperimen14.png)
 
