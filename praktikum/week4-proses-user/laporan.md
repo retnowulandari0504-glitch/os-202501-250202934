@@ -48,7 +48,177 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    id
    groups
    ```
-   - Jelaskan setiap output dan fungsinya.  
+   - Jelaskan setiap output dan fungsinya. 
+
+      Jawab :
+
+         retnowulandari0504@LAPTOP-CA0KHU5V:~$ whoami
+         retnowulandari0504
+         retnowulandari0504@LAPTOP-CA0KHU5V:~$ id
+         uid=1000(retnowulandari0504) gid=1000(retnowulandari0504) groups=1000(retnowulandari0504),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio) 30(dip),44(video),46(plugdev),117(netdev)
+         retnowulandari0504@LAPTOP-CA0KHU5V:~$ groups
+         retnowulandari0504 adm dialout cdrom floppy sudo audio dip video plugdev netdev
+
+
+whoami = Menampilkan nama user yang sedang aktif/login di sistem Linux. Artinya user yang sedang menggunakan terminal saat ini bernama **retnowulandari0504**. Perintah ini sangat berguna untuk memastikan siapa user aktif saat ini.
+
+id = Menampilkan informasi identitas user secara lengkap, termasuk:
+
+- UID (User ID)
+
+- GID (Group ID)
+
+- Groups (keanggotaan grup)
+
+<html>
+<head>
+<body>
+   <table>
+   <tr>
+   <th>Bagian Output</th>
+   <th>Fungsi</th>
+   </tr>
+   <tr>
+   <td>uid=1000(retnowulandari0504)</td>
+   <td> uid (User ID) adalah identitas unik untuk user ini.1000 biasanya menunjukkan user pertama yang dibuat di sistem (bukan root)</td>
+    </tr>
+   <tr>
+   <td>gid=1000(retnowulandari0504)</td>
+   <td> gid (Group ID) adalah identitas grup utama user, dalam hal ini grup dengan nama yang sama retnowulandari0504</td>
+    </tr>
+   <tr>
+   <td>groups</td>
+   <td>Menampilkan semua grup yang diikuti oleh user, beserta ID dan namanya. Tiap grup memberi hak akses tertentu</td>
+   </table>
+   </body>
+   
+   Berikut makna tiap grup: 
+<html>
+<head>
+<body>
+   <table>
+   <tr>
+   <th>ID Grup</th>
+   <th>Nama Grup</th>
+   <th>Fungsi</th>
+   </tr>
+   <tr>
+   <td>1000</td>
+   <td>retnowulandari0504</td>
+   <td>Grup utama user</td>
+   </tr>
+    <tr>
+   <td>4</td>
+   <td>adm</td>
+   <td>Dapat membaca log sistem (akses administratif ringan)</td>
+   </tr>
+    <tr>
+   <td>20</td>
+   <td>dialout</td>
+   <td>Mengakses port serial, modem, atau perangkat komunikasi</td>
+   </tr>
+    <tr>
+   <td>24</td>
+   <td>cdrom</td>
+   <td>Mengakses CD/DVD drive</td>
+   </tr>
+    <tr>
+   <td>25</td>
+   <td>floppy</td>
+   <td>Mengakses floppy disk (jarang dipakai sekarang)</td>
+   </tr>
+    <tr>
+   <td>27</td>
+   <td>sudo</td>
+   <td>Dapat menjalankan perintah dengan hak root (administrator)</td>
+   </tr>
+    <tr>
+   <td>29</td>
+   <td>audio</td>
+   <td>Mengakses perangkat audio (speaker, mic)</td>
+   </tr>
+    <tr>
+   <td>30</td>
+   <td>dip</td>
+   <td>Mengaatur koneksi jaringan (PPP,dial-up)</td>
+   </tr>
+    <tr>
+   <td>44</td>
+   <td>video</td>
+   <td>Mengakses perangkat video seperti GPU, kamera</td>
+   </tr>
+    <tr>
+   <td>46</td>
+   <td>plugdev</td>
+   <td>Mengakses perangkat eksternal seperti USB dan hard disk eksternal</td>
+   </tr>
+    <tr>
+   <td>117</td>
+   <td>netdev</td>
+   <td>Mengakses atau mengatur perangkat jaringan (Wi-Fi, LAN)</td>
+   </tr>
+   </table>
+   </body>
+
+   - Groups digunakan untuk menampilkan daftar grup yang diikuti oleh user tertentu.
+
+   Jika dijalankan tanpa argumen (groups saja), maka akan menampilkan grup dari user yang sedang login.
+   
+   Jika disertai nama user (groups retnowulandari0504), maka akan menampilkan grup milik user tersebut.
+<html>
+<head>
+<body>
+   <table>
+   <tr>
+   <th>Nama Grup</th>
+   <th>Fungsi</th>
+   </tr>
+   <tr>
+   <td>retnowulandari0504</td>
+   <td>Grup utama memiliki user (grup default dengan nama yang sama)</td>
+     </tr>
+   <tr>
+   <td>adm</td>
+   <td>Mengizinkan user membaca log sistem (administrative logs)</td>
+   </tr>
+   <tr>
+   <td>dialout</td>
+   <td>Mengizinkan akses ke perangkat serial seperti modem atau port COM</td>
+   </tr>
+   <tr>
+   <td>cdrom</td>
+   <td>Memberi izin untuk menggunakan CD/DVD drive</td>
+   </tr>
+   <tr>
+   <td>floppy</td>
+   <td>Izin megakses floppy disk (jarang digunakan sekarang)</td>
+   </tr>
+   <tr>
+   <td>sudo</td>
+   <td>Mengizinkan user menjalankan perintah dengan hak root (administator)</td>
+   </tr>
+   <tr>
+   <td>audio</td>
+   <td>Memberi izin untuk menggunakan perangkat audio(mic,speaker)</td>
+   </tr>
+   <tr>
+   <td>dip</td>
+   <td>Izin menggunakan koneksi jaringan seperti dial-up atau PPP</td>
+   </tr>
+   <tr>
+   <td>video</td>
+   <td>Izin mengakses perangkat video (misalnya GPU, kamera)</td>
+   </tr>
+   <tr>
+   <td>plugdev</td>
+   <td>Izin untuk menggunakan perangkat eksternal seperti USB atau hard disk eksternal</td>
+   </tr>
+   <tr>
+   <td>netdev</td>
+   <td>Izin mengelola perangkat jaringan (Wi-Fi, Ethernet,dsbS)</td>
+   </table>
+   </body>
+
    - Buat user baru (jika memiliki izin sudo):
      ```bash
      sudo adduser praktikan
