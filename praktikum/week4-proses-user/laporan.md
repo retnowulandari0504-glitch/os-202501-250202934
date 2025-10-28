@@ -275,12 +275,23 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
      ps aux | grep sleep
      ```
    - Catat PID proses `sleep`.  
+
+         praktikan@LAPTOP-CA0KHU5V:~$ sleep 1000 &
+         [1] 1456
+
+         praktikan@LAPTOP-CA0KHU5V:~$ ps aux | grep sleep
+         praktik+    1456  0.0  0.0   3212  1792 pts/0    S    20:13   0:00 sleep 1000
+         praktik+    1458  0.0  0.0   3892  2304 pts/0    R+   20:13   0:00 grep --color=auto sleep
+
    - Hentikan proses:
      ```bash
      kill <PID>
      ```
    - Pastikan proses telah berhenti dengan `ps aux | grep sleep`.
 
+         praktikan@LAPTOP-CA0KHU5V:~$ kill 1458
+         -bash: kill: (1458) - No such process
+         [1]+  Terminated              sleep 1000
 5. **Eksperimen 4 – Analisis Hierarki Proses**
    Jalankan:
    ```bash
