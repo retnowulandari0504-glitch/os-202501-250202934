@@ -348,6 +348,19 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
 ## D. Tugas & Quiz
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
+   Jawab :
+   Ekperimen 1
+   ![Screenshot hasil](screenshots/eksperimen14.png)
+
+   Ekperimen 2
+   ![Screenshot hasil](screenshots/eksperimen24.png)
+
+   Ekperimen 3
+   ![Screenshot hasil](screenshots/eksperimen34.png)
+
+   Ekperimen 4
+   ![Screenshot hasil](screenshots/eksperimen44.png)
+
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
 
    Jawab :
