@@ -212,8 +212,6 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
    <td>netdev</td>
    <td>Izin mengelola perangkat jaringan (Wi-Fi, Ethernet,dsbS)</td>
    </table>
-   </body>
-</html>
 
    - Buat user baru (jika memiliki izin sudo):
      ```bash
@@ -221,6 +219,11 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
      sudo passwd praktikan
      ```
    - Uji login ke user baru.
+            
+         retnowulandari0504@LAPTOP-CA0KHU5V:~$ su - praktikan
+         Password:
+         praktikan@LAPTOP-CA0KHU5V:~$ whoami
+         praktikan
 
 3. **Eksperimen 2 – Monitoring Proses**
    Jalankan:
@@ -229,9 +232,40 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
    top -n 1
    ```
    - Jelaskan kolom penting seperti PID, USER, %CPU, %MEM, COMMAND.  
+   <table>
+   <tr>
+   <th>Kolom</th>
+   <th>Arti / Fungsi</th>
+   </tr>
+   <tr>
+   <td>USER</td>	
+   <td>Menunjukkan nama user yang menjalankan proses tersebut. Misalnya root, systemd+, message+, dsb.</td>
+   </tr>
+   <tr>
+   <td>PID</td>	
+   <td>Process ID, yaitu nomor unik yang diberikan sistem untuk mengidentifikasi setiap proses.</td>
+   </tr>
+   <tr>
+   <td>CPU</td>	
+   <td>Persentase penggunaan CPU oleh proses tersebut. Semakin besar nilainya, semakin banyak sumber daya CPU yang digunakan.</td>
+   </tr>
+   <tr>
+   <td>MEM</td>	
+   <td>Persentase penggunaan memori (RAM) oleh proses. Ini menunjukkan seberapa besar memori yang dikonsumsi oleh proses.</td>
+   </tr>
+   <tr>
+   <td>COMMAND</td>	
+   <td> Menampilkan nama perintah atau program yang dijalankan. Misalnya /sbin/init, /lib/systemd/systemd-journald, atau cron</td>.
+   </tr>
+</table>
+</body>
+</html>
    - Simpan tangkapan layar `top` ke:
      ```
      praktikum/week4-proses-user/screenshots/top.png
+
+     ![Screenshot hasil](screenshots/top.png)
+     
      ```
 
 4. **Eksperimen 3 – Kontrol Proses**
@@ -255,6 +289,42 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
    - Amati hierarki proses dan identifikasi proses induk (`init`/`systemd`).  
    - Catat hasilnya dalam laporan.
 
+      Jawab : 
+
+      **Hasil Eksperimen**
+      
+         praktikan@LAPTOP-CA0KHU5V:~$ pstree -p | head -20
+         systemd(1)-+-agetty(234)
+           |-agetty(241)
+           |-cron(138)
+           |-dbus-daemon(141)
+           |-init-systemd(Ub(2)-+-SessionLeader(1373)---Relay(1376)(1374)---bash(1376)---su(1394)---bash(1409)-+-head(1499)
+           |                    |                                                                              `-pstree(1498)
+           |                    |-init(7)---{init}(8)
+           |                    |-login(291)---bash(349)
+           |                    `-{init-systemd(Ub}(9)
+           |-networkd-dispat(166)
+           |-rsyslogd(168)-+-{rsyslogd}(203)
+           |               |-{rsyslogd}(204)
+           |               `-{rsyslogd}(205)
+           |-systemd(335)---(sd-pam)(336)
+           |-systemd(1396)---(sd-pam)(1397)
+           |-systemd-journal(61)
+           |-systemd-logind(187)
+           |-systemd-resolve(93)
+           |-systemd-timesyn(94)---{systemd-timesyn}(126)
+           |-systemd-udevd(90)
+
+   Penjelasan :
+
+   - pstree → Menampilkan hirarki proses dalam bentuk pohon (tree).
+   - -p → Menampilkan PID (Process ID) di setiap proses.
+   - | head -20 → Hanya menampilkan 20 baris pertama dari output agar tidak terlalu panjang.
+   - systemd(1) adalah proses induk utama (root process) — semua proses lain adalah turunannya.
+   - Setiap percabangan (├─ dan └─) menunjukkan proses anak (child process).
+   - Bash(1409) menjalankan dua proses anak: head(1499) dan pstree(1498). 
+   - Proses dalam kurung kurawal {} menunjukkan thread internal dari proses utama.
+
 6. **Commit & Push**
    ```bash
    git add .
@@ -267,7 +337,45 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
 ## D. Tugas & Quiz
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
-2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.  
+2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
+
+   Jawab :
+
+         systemd(1)
+         ├─ agetty(234)
+         ├─ agetty(241)
+         ├─ cron(138)
+         ├─ dbus-daemon(141)
+         ├─ init-systemd(Ub)(2)
+         │  ├─ SessionLeader(1373)
+         │  │   └─ Relay(1376)(1374)
+         │  │       └─ bash(1376)
+         │  │           └─ su(1394)
+         │  │               └─ bash(1409)
+         │  │                   ├─ head(1499)
+         │  │                   └─ pstree(1498)
+         │  ├─ init(7)
+         │  │   └─ {init}(8)
+         │  ├─ login(291)
+         │  │   └─ bash(349)
+         │  └─ {init-systemd(Ub}(9)
+         ├─ networkd-dispat(166)
+         ├─ rsyslogd(168)
+         │  ├─ {rsyslogd}(203)
+         │  ├─ {rsyslogd}(204)
+         │  └─ {rsyslogd}(205)
+         ├─ systemd(335)
+         │  └─ (sd-pam)(336)
+         ├─ systemd(1396)
+         │  └─ (sd-pam)(1397)
+         ├─ systemd-journal(61)
+         ├─ systemd-logind(187)
+         ├─ systemd-resolve(93)
+         ├─ systemd-timesyn(94)
+         │  └─ {systemd-timesyn}(126)
+         └─ systemd-udevd(90)
+
+
 3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
 
    Jawab :  Hubungan antara user management dan keamanan sistem linux   adalah pengelolaan pengguna yang baik menjadi kunci utama dalam menjaga keamanan sistem. User management berperan langsung dalam mencegah penyalahgunaan, menlindungi data dan menjaga stabilitas serta integritas sistem Linux  
