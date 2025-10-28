@@ -266,7 +266,7 @@ id = Menampilkan informasi identitas user secara lengkap, termasuk:
 
    ![Screenshot hasil](screenshots/top.png)
 
-     ```
+     
 
 4. **Eksperimen 3 – Kontrol Proses**
    - Jalankan program latar belakang:
