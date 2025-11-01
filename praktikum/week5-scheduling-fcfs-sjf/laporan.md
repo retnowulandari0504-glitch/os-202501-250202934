@@ -74,7 +74,19 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 5. **Analisis**
    - Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
-   - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.  
+   - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.
+   
+   Jawab : FCFS lebih unggul dari SJF
+    Kondisi:
+
+   •	Proses datang secara tidak menentu (arrival time bervariasi)
+
+   •	Sistem bersifat interaktif (misalnya sistem operasi pengguna, server real-time)
+
+   •	Tidak diketahui burst time pasti setiap proses
+
+   •	Diperlukan keadilan (fairness), bukan efisiensi maksimum.
+  
    - Tambahkan kesimpulan singkat di akhir laporan.
 
 6. **Commit & Push**
@@ -91,6 +103,20 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 1. Hitung *waiting time* dan *turnaround time* dari minimal 2 skenario FCFS dan SJF.  
 2. Sajikan hasil perhitungan dalam tabel perbandingan (FCFS vs SJF).  
 3. Analisis kelebihan dan kelemahan tiap algoritma.  
+Jawab : 
+
+   **FCFS (First Come First Served)**
+
+   **Kelebihan** : Sederhana dan mudah diimplementasikan, serta adil: proses dilayani sesuai urutan kedatangan.
+
+   **Kelemahan** : Waktu tunggu bisa lama untuk proses pendek jika di belakang proses panjang (efek convoy) dan tidak efisien untuk sistem interaktif.
+
+   **SJF (Shortest Job First)**
+
+   **Kelebihan**: Memberikan rata-rata waktu tunggu minimum dan efisien untuk sistem batch.
+
+   **Kelemahan** :Harus tahu waktu eksekusi tiap proses (tidak realistis kadang) dan bisa menimbulkan kelaparan (starvation) bagi proses panjang.
+
 4. Simpan seluruh hasil dan analisis ke `laporan.md`.  
 
 ### Quiz
