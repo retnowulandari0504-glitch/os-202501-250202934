@@ -75,7 +75,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 5. **Analisis**
    - Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
    - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.
-   
+
    Jawab : FCFS lebih unggul dari SJF
     Kondisi:
 
@@ -122,7 +122,9 @@ Jawab :
 ### Quiz
 Tuliskan jawaban di bagian **Quiz** pada laporan:
 1. Apa perbedaan utama antara FCFS dan SJF?  
-   Jawab: **FCFS** mengutamakan urutan kedatangan, proses yang datang lebih dulu dieksekusi lebih dulu, sederhana dan mudah diimplementasikan serta bisa terjadi proses pendek menunggu proses panjang selesai. Sedangkan **SJF** mengutamakan durasi proses terpendek untuk meminimalkan waktu tunggu rata-rata, proses dengan waktu eksekusi paling pendek dieksekusi lebih dulu, membutuhkan perkiraan burst time yang akurat dan sulit diterapkan pada sistem nyata, serta waktu tunggu rata-rata bisa menjadi paling kecil (optimal).
+   Jawab: **FCFS** mengutamakan urutan kedatangan, proses yang datang lebih dulu dieksekusi lebih dulu, sederhana dan mudah diimplementasikan serta bisa terjadi proses pendek menunggu proses panjang selesai. 
+   
+   Sedangkan **SJF** mengutamakan durasi proses terpendek untuk meminimalkan waktu tunggu rata-rata, proses dengan waktu eksekusi paling pendek dieksekusi lebih dulu, membutuhkan perkiraan burst time yang akurat dan sulit diterapkan pada sistem nyata, serta waktu tunggu rata-rata bisa menjadi paling kecil (optimal).
 2. Mengapa SJF dapat menghasilkan rata-rata waktu tunggu minimum? 
 
    Jawab : Karena proses singkat selesai cepat → mengurangi antrean, total penjumlahan waktu tunggu seluruh proses menjadi minimum dan  terbukti secara matematis sebagai strategi optimal untuk meminimalkan total waktu tunggu (bukti formal dikenal dalam teori “Shortest Remaining Time First” untuk versi preemptive). 
