@@ -41,12 +41,45 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 2. **Eksperimen 1 – FCFS (First Come First Served)**
    - Urutkan proses berdasarkan *Arrival Time*.  
+       Jawab : P1 → P2 → P3 → P4
+
    - Hitung nilai berikut untuk tiap proses:
      ```
      Waiting Time (WT) = waktu mulai eksekusi - Arrival Time
      Turnaround Time (TAT) = WT + Burst Time
      ```
-   - Hitung rata-rata Waiting Time dan Turnaround Time.  
+
+     Jawab :  
+      Waiting Time (WT) = waktu mulai eksekusi - Arrival Time
+
+       P1 = 0 - 0 = 0
+
+       P2 = 6 - 1 = 5
+
+       P3 = 14 - 2 = 12
+
+       P4 = 21 - 3 = 18
+
+      P1+P2+P3+P4 = 0 + 5 + 12 + 18 = 35
+
+      Turnaround Time (TAT) = WT + Burst Time
+
+        P1 = 0 + 6 = 6
+
+        P2 = 5 + 8 = 13
+
+        P3 = 12 + 7 = 19
+
+        P4 = 18 + 3 = 21
+
+        P1+P2+P3+P4 = 6 + 13 + 19 + 21 = 59
+
+   - Hitung rata-rata Waiting Time dan Turnaround Time.
+
+     Waiting Time (WT) = 35 / 4 = 8,75
+
+     Rata-Rata Turnaround Time (TAT) =  59 / 4 = 14,75
+
    - Buat Gantt Chart sederhana:  
      ```
      | P1 | P2 | P3 | P4 |
@@ -55,13 +88,29 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 3. **Eksperimen 2 – SJF (Shortest Job First)**
    - Urutkan proses berdasarkan *Burst Time* terpendek (dengan memperhatikan waktu kedatangan).  
+
+      Jawab : P1 → P4 → P3 → P2
+    
    - Lakukan perhitungan WT dan TAT seperti langkah sebelumnya.  
+
+      Jawab :
+      Waiting Time (WT) = waktu mulai eksekusi - Arrival Time
+
+      P1 = 0 - 0 = 0
+
+      P4 = 6 - 3 = 9
+
+      P3 = 9 - 2 = 7
+      
+      P2 = 16 - 1 = 15
+
+      P1 + P4 + P3 + P2 = 0 + 9 + 7 + 15 = 25
    - Bandingkan hasil FCFS dan SJF pada tabel berikut:
 
      | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
      |------------|------------------|----------------------|------------|-------------|
-     | FCFS | ... | ... | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
-     | SJF | ... | ... | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+     | FCFS | 8, 75 | 14, 75| Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+     | SJF | 6, 25 | 12, 25| Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
 
 4. **Eksperimen 3 – Visualisasi Spreadsheet (Opsional)**
    - Gunakan Excel/Google Sheets untuk membuat perhitungan otomatis:
@@ -70,24 +119,40 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    - Screenshot hasil perhitungan dan simpan di:
      ```
      praktikum/week5-scheduling-fcfs-sjf/screenshots/
+
+ ![Screenshot hasil](screenshots/Tabel_FCFS_SJF.png)
+
      ```
 
 5. **Analisis**
    - Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
+
+      Jawab :
+     
+      - Average Waiting Time: FCFS = 8.75 vs SJF = 6.25 → SJF lebih baik
+
+      - Average Turnaround Time: FCFS = 14.75 vs SJF = 12.25 → SJF lebih baik
+
+      - Finish times sama untuk keseluruhan (semua job selesai pada t = 24)
+
    - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.
 
-   Jawab : FCFS lebih unggul dari SJF
-    Kondisi:
-
-   •	Proses datang secara tidak menentu (arrival time bervariasi)
-
-   •	Sistem bersifat interaktif (misalnya sistem operasi pengguna, server real-time)
-
-   •	Tidak diketahui burst time pasti setiap proses
-
-   •	Diperlukan keadilan (fairness), bukan efisiensi maksimum.
+      Jawab : 
+      
+      SJF lebih unggul di mana semua Burst Time sudah diketahui sebelumnya dan tujuannya adalah meminimalkan waktu tunggu rata-rata.
+   
+      FCFS (First Come First Served) lebih unggul ketika semua proses memiliki Burst Time yang relatif sama atau perbedaan waktu kedatangan sangat signifikan.
+      
+      Dari hasil ini tabel rata-rata, SJF lebih efisien karena Burst Time antar proses berbeda cukup jauh (3–8).
   
    - Tambahkan kesimpulan singkat di akhir laporan.
+
+      Jawab :
+
+      SJF (non-preemptive) menghasilkan waktu tunggu rata-rata dan turnaround rata-rata lebih kecil dibanding FCFS artinya lebih efisien dari sisi rata-rata.
+
+      Jika tujuannya adalah meminimalkan waktu tunggu rata-rata, pilih SJF. Tetapi,  jika tujuannya fairness dan kesederhanaan pilih FCFS.
+      FCFS (First Come First Served) dianggap lebih fair (adil) karena proses yang datang lebih dulu akan dikerjakan lebih dulu, tanpa memandang panjang atau pendeknya waktu eksekusi. SJF (Shortest Job First) bisa kurang fair, karena proses yang lama (Burst Time besar) bisa terus tertunda  yang disebut starvation (kelaparan).
 
 6. **Commit & Push**
    ```bash
