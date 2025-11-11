@@ -41,7 +41,11 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 2. **Eksperimen 1 – FCFS (First Come First Served)**
    - Urutkan proses berdasarkan *Arrival Time*.  
-       Jawab : P1 → P2 → P3 → P4
+       Jawab : 
+         Gantt Chart
+
+         | P1 | P2 | P3 | P4 |
+         0    6    14   21   24
 
    - Hitung nilai berikut untuk tiap proses:
      ```
@@ -89,7 +93,10 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 3. **Eksperimen 2 – SJF (Shortest Job First)**
    - Urutkan proses berdasarkan *Burst Time* terpendek (dengan memperhatikan waktu kedatangan).  
 
-      Jawab : P1 → P4 → P3 → P2
+      Jawab : Gantt Chart  
+
+         | P1 | P4 | P3 | P2 |
+         0    6    9   16   24
     
    - Lakukan perhitungan WT dan TAT seperti langkah sebelumnya.  
 
@@ -105,6 +112,20 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
       P2 = 16 - 1 = 15
 
       P1 + P4 + P3 + P2 = 0 + 9 + 7 + 15 = 25
+
+      
+      Turnaround Time (TAT) = WT + Burst Time
+
+      P1 = 0 + 6 = 6
+      
+      P4 = 3 + 3 = 6
+
+      P3 = 7 + 7 = 14
+
+      P2 = 15 + 8 = 23
+
+      P1 + P4 + P3 + P2 = 6 + 6 + 14 + 23 = 49
+
    - Bandingkan hasil FCFS dan SJF pada tabel berikut:
 
      | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
@@ -165,11 +186,29 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ## D. Tugas & Quiz
 ### Tugas
-1. Hitung *waiting time* dan *turnaround time* dari minimal 2 skenario FCFS dan SJF.  
-2. Sajikan hasil perhitungan dalam tabel perbandingan (FCFS vs SJF).  
+1. Hitung *waiting time* dan *turnaround time* dari minimal 2 skenario FCFS dan SJF. 
+2. Sajikan hasil perhitungan dalam tabel perbandingan (FCFS vs SJF). 
 3. Analisis kelebihan dan kelemahan tiap algoritma.  
 Jawab : 
 
+![Screenshot hasil](screenshots/tugas_skenario1.png)
+
+- Hasil perhitungan FCFS dan SJF Skenario 1 pada tabel berikut:
+
+     | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+     |------------|------------------|----------------------|------------|-------------|
+     | FCFS | 6, 75 | 11,75| Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+     | SJF | 6,25 | 11,25| Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+
+![Screenshot hasil](screenshots/tugas_skenario2.png)
+
+- Hasil perhitungan FCFS dan SJF Skenario 2 pada tabel berikut:
+
+     | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+     |------------|------------------|----------------------|------------|-------------|
+     | FCFS | 6,5 | 13,5| Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+     | SJF | 5,5 | 12,5| Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+     
    **FCFS (First Come First Served)**
 
    **Kelebihan** : Sederhana dan mudah diimplementasikan, serta adil: proses dilayani sesuai urutan kedatangan.
