@@ -114,7 +114,8 @@ Tuliskan jawaban di bagian **Quiz** pada laporan:
    - Mengurangi throughput: Proses memiliki waktu lebih singkat untuk dieksekusi, sehingga throughput sistem menurun.
 
 3. Mengapa algoritma Priority dapat menyebabkan *starvation*?  
-   Jawab : Karena proses dengan prioritas rendah mungkin tidak pernah mendapatkan kesempatan untuk dieksekusi jika ada proses lain dengan prioritas yang lebih tinggi yang terus-menerus masuk ke dalam antrian, sehingga proses dengan prioritas rendah diabaikan dan tidak dapat menyelesaikan tugasnya.
+   Jawab : 
+   Karena proses dengan prioritas rendah mungkin tidak pernah mendapatkan kesempatan untuk dieksekusi jika ada proses lain dengan prioritas yang lebih tinggi yang terus-menerus masuk ke dalam antrian, sehingga proses dengan prioritas rendah diabaikan dan tidak dapat menyelesaikan tugasnya.
 ---
 
 ## E. Output yang Diharapkan
