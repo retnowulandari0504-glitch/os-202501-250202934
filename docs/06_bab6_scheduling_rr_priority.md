@@ -2,6 +2,11 @@
 Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling  
 
 ---
+## Identitas
+- **Nama**  : [Dyah Retno Wulandari]  
+- **NIM**   : [250202934]  
+- **Kelas** : [1IKRB]
+
 
 ## A. Deskripsi Singkat
 Pada praktikum minggu ini, mahasiswa akan mempelajari **dua algoritma lanjutan penjadwalan CPU**, yaitu:
@@ -87,10 +92,29 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ### Quiz
 Tuliskan jawaban di bagian **Quiz** pada laporan:
-1. Apa perbedaan utama antara Round Robin dan Priority Scheduling?  
-2. Apa pengaruh besar/kecilnya *time quantum* terhadap performa sistem?  
-3. Mengapa algoritma Priority dapat menyebabkan *starvation*?  
+1. Apa perbedaan utama antara Round Robin dan Priority Scheduling? 
 
+   Jawab : 
+- Round Robin (RR): Menggunakan konsep time-sharing dengan memberikan waktu eksekusi yang sama (time slice) secara bergantian ke setiap proses, tanpa memandang prioritas.
+- Priority Scheduling: Proses dengan prioritas tertinggi dieksekusi terlebih dahulu, tanpa menggunakan time slice, dan proses dengan prioritas rendah mungkin memiliki waktu tunggu yang lebih lama.
+
+2. Apa pengaruh besar/kecilnya *time quantum* terhadap performa sistem?  
+  
+   Jawab: 
+
+    **Time Quantum Besar:**
+   
+   - Mengurangi overhead switching konteks: Proses memiliki waktu lebih lama untuk dieksekusi sebelum digantikan oleh proses lain, sehingga mengurangi jumlah switching konteks.
+   -  Meningkatkan throughput: Proses dapat menyelesaikan tugasnya lebih cepat karena memiliki waktu lebih lama untuk dieksekusi.
+   - Mengurangi responsifitas: Proses lain harus menunggu lebih lama untuk mendapatkan giliran, sehingga responsifitas sistem menurun.
+
+   **Time Quantum Kecil:**
+   - Meningkatkan responsifitas: Proses lain dapat mendapatkan giliran lebih cepat, sehingga responsifitas sistem meningkat.
+   - Meningkatkan overhead switching konteks: Proses harus sering digantikan oleh proses lain, sehingga meningkatkan jumlah switching konteks dan overhead.
+   - Mengurangi throughput: Proses memiliki waktu lebih singkat untuk dieksekusi, sehingga throughput sistem menurun.
+
+3. Mengapa algoritma Priority dapat menyebabkan *starvation*?  
+   Jawab : Karena proses dengan prioritas rendah mungkin tidak pernah mendapatkan kesempatan untuk dieksekusi jika ada proses lain dengan prioritas yang lebih tinggi yang terus-menerus masuk ke dalam antrian, sehingga proses dengan prioritas rendah diabaikan dan tidak dapat menyelesaikan tugasnya.
 ---
 
 ## E. Output yang Diharapkan
