@@ -58,7 +58,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    - Buat tabel perbandingan efek *quantum*.
 
 5. **Eksperimen 4 – Dokumentasi**
-   - Simpan semua hasil tabel dan screenshot ke:
+   - Simpan semua hasil tabel dan screenshot ke: 
      ```
      praktikum/week6-scheduling-rr-priority/screenshots/
      ```
