@@ -24,7 +24,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 2. Menyusun tabel hasil perhitungan dengan benar dan sistematis.  
 3. Membandingkan performa algoritma RR dan Priority.  
 4. Menjelaskan pengaruh *time quantum* dan prioritas terhadap keadilan eksekusi proses.  
-5. Menarik kesimpulan mengenai efisiensi dan keadilan kedua algoritma.  
+5. Menarik kesimpulan mengenai efisiensi dan keadilan kedua algoritma. 
 
 ---
 
