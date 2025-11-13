@@ -2,11 +2,6 @@
 Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling  
 
 ---
-## Identitas
-- **Nama**  : [Dyah Retno Wulandari]  
-- **NIM**   : [250202934]  
-- **Kelas** : [1IKRB]
-
 
 ## A. Deskripsi Singkat
 Pada praktikum minggu ini, mahasiswa akan mempelajari **dua algoritma lanjutan penjadwalan CPU**, yaitu:
