@@ -84,6 +84,38 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
      ```
    - Buat tabel perbandingan hasil RR dan Priority.
 
+Hasil Eksperimen 2 
+
+Gantt Chart :
+
+      | P1 | P2 | P4 | P3 | 
+      0    5    8   14    22
+
+  WT[i] = waktu mulai eksekusi - Arrival[i]
+
+   P1 = 0 - 0 = 0
+
+   P2 = 5 - 1 = 4
+
+   P3 = 14 - 2 = 12
+
+   P4 = 8 - 3 = 5
+
+   P1+P2+P3+P4 = 0 + 4 + 12 + 22 = 47
+
+  TAT[i] = WT[i] + Burst[i]
+
+   P1 = 0 + 5 = 5
+
+   P2 = 4 + 3 = 7
+
+   P3 = 12 + 8 = 20
+
+   P4 = 5 + 6 = 11
+
+   P1+P2+P3+P4 = 5+7+20+11 = 43
+   
+
 4. **Eksperimen 3 – Analisis Variasi Time Quantum (Opsional)**
    - Ubah *quantum* menjadi 2 dan 5.  
    - Amati perubahan nilai rata-rata *waiting time* dan *turnaround time*.  
@@ -97,7 +129,7 @@ Eksperimen 3 (quantum = 2)
        | P1 | P2 | P3 | P1 | P4 | P2 | P3 | P1 | P4 | P3 | P4 | P3 |
        0    2    4    6    8   10   11   13   14   16   18   20   22
 
-Eksperimen 3(quantum = 5)
+Eksperimen 3 (quantum = 5)
     ![Screenshot hasil](screenshots/Eksperimen3_q5.png)
 
     Gantt Chart :
