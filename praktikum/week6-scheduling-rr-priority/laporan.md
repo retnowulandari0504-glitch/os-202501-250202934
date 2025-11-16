@@ -107,11 +107,11 @@ Eksperimen 3(quantum = 5)
 
 Tabel perbandingan 
 
-   | Quantum | Avg Waiting Time | Avg Turnaround Time | |  |
-   |------------|------------------|----------------------|------------|-------------|
-   | q = 2 | 9,75 | 15,25 | 
-   | q = 3 | 8,5 | 14 | 
-   | q = 5 | 7 | 12,5 | 
+   | Quantum | Avg Waiting Time | Avg Turnaround Time
+   |------------|------------------|----------------------
+   | q = 2 | 9,75 | 15,25
+   | q = 3 | 8,5 | 14
+   | q = 5 | 7 | 12,5 
 
 5. **Eksperimen 4 – Dokumentasi**
    - Simpan semua hasil tabel dan screenshot ke:
