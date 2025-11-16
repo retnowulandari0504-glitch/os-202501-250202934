@@ -48,6 +48,33 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
      ```
    - Catat sisa *burst time* tiap putaran.
 
+   Hasil Eksperimen 1
+    ![Screenshot hasil](screenshots/Eksperimen1_RR.png)
+
+    Gantt Chart Round Robin (q=3)
+     ```
+     | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+     0    3    6    9    12   14   17   20   22 
+     ```
+
+     Catatan Eksekusi :
+
+      P1 = 5-3 = sisa 2
+      
+      P2 = 3-3 = sisa 0 (selesai)
+
+      P3 = 8-3 = sisa 5
+
+      P4 = 6-3 = sisa 3
+
+      P1 = 2 (selesai)
+
+      P3 = 5-3 = sisa 2
+
+      P4 = 3-3 = sisa 0 (selesai)
+
+      P3 = 2 (selesai)
+
 3. **Eksperimen 2 – Priority Scheduling (Non-Preemptive)**
    - Urutkan proses berdasarkan nilai prioritas (angka kecil = prioritas tinggi).  
    - Lakukan perhitungan manual untuk:
@@ -61,6 +88,30 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    - Ubah *quantum* menjadi 2 dan 5.  
    - Amati perubahan nilai rata-rata *waiting time* dan *turnaround time*.  
    - Buat tabel perbandingan efek *quantum*.
+
+Eksperimen 3 (quantum = 2)
+   ![Screenshot hasil](screenshots/Eksperimen3_q2.png)
+
+   Gantt Chart:
+
+       | P1 | P2 | P3 | P1 | P4 | P2 | P3 | P1 | P4 | P3 | P4 | P3 |
+       0    2    4    6    8   10   11   13   14   16   18   20   22
+
+Eksperimen 3(quantum = 5)
+    ![Screenshot hasil](screenshots/Eksperimen3_q5.png)
+
+    Gantt Chart :
+
+      | P1 | P2 | P3 | P4 | P3 | P4 | 
+       0    5    8   13   18   21   22  
+
+Tabel perbandingan 
+
+   | Quantum | Avg Waiting Time | Avg Turnaround Time | |  |
+   |------------|------------------|----------------------|------------|-------------|
+   | q = 2 | 9,75 | 15,25 | 
+   | q = 3 | 8,5 | 14 | 
+   | q = 5 | 7 | 12,5 | 
 
 5. **Eksperimen 4 – Dokumentasi**
    - Simpan semua hasil tabel dan screenshot ke:
