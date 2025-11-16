@@ -57,7 +57,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
      0    3    6    9    12   14   17   20   22 
      ```
 
-     Catatan Eksekusi :
+     Catatan Eksekusi sisa *burst time* tiap putaran :
 
       P1 = 5-3 = sisa 2
       
@@ -101,7 +101,7 @@ Gantt Chart :
 
    P4 = 8 - 3 = 5
 
-   P1+P2+P3+P4 = 0 + 4 + 12 + 22 = 47
+   P1+P2+P3+P4 = 0 + 4 + 12 + 22 = 38
 
   TAT[i] = WT[i] + Burst[i]
 
@@ -113,7 +113,7 @@ Gantt Chart :
 
    P4 = 5 + 6 = 11
 
-   P1+P2+P3+P4 = 5+7+20+11 = 43
+   P1+P2+P3+P4 = 5 + 7 + 20 + 11 = 43
    
 
 4. **Eksperimen 3 – Analisis Variasi Time Quantum (Opsional)**
@@ -137,7 +137,7 @@ Eksperimen 3 (quantum = 5)
       | P1 | P2 | P3 | P4 | P3 | P4 | 
        0    5    8   13   18   21   22  
 
-Tabel perbandingan 
+Tabel perbandingan efek quantum
 
    | Quantum | Avg Waiting Time | Avg Turnaround Time
    |------------|------------------|----------------------
@@ -154,8 +154,8 @@ Tabel perbandingan
 
      | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
      |------------|------------------|----------------------|------------|-------------|
-     | RR | ... | ... | Adil terhadap semua proses | Tidak efisien jika quantum tidak tepat |
-     | Priority | ... | ... | Efisien untuk proses penting | Potensi *starvation* pada prioritas rendah |
+     | RR | 8,5 | 14 | Adil terhadap semua proses | Tidak efisien jika quantum tidak tepat |
+     | Priority | 9,5 | 10,75 | Efisien untuk proses penting | Potensi *starvation* pada prioritas rendah |
 
 6. **Commit & Push**
    ```bash
@@ -168,9 +168,37 @@ Tabel perbandingan
 
 ## D. Tugas & Quiz
 ### Tugas
-1. Hitung *waiting time* dan *turnaround time* untuk algoritma RR dan Priority.  
+1. Hitung *waiting time* dan *turnaround time* untuk algoritma RR dan Priority. 
+
+   Jawab : 
+
+   Round Robin (q=3) : 
+
+   WT = P1+P2+P3+P4 = 9+2+11+12= 34
+
+   TAT = P1+P2+P3+P4 = 14+5+20+17= 56
+
+   Priority Scheduling :
+
+   WT = P1+P2+P3+P4 = 0+4+12+22= 38
+
+   TAT = P1+P2+P3+P4= 5+7+20+11= 43
+
+
 2. Sajikan hasil perhitungan dan Gantt Chart dalam `laporan.md`.  
-3. Bandingkan performa dan jelaskan pengaruh *time quantum* serta prioritas.  
+3. Bandingkan performa dan jelaskan pengaruh *time quantum* serta prioritas. 
+
+   Jawab : 
+   Performa priority lebih cepat karena proses dupilih berdasarkan prioritas dan hasil WT dan TAT jauh lebih kecil dibanding RR. Sedangkan performa Round Robin lebih adil karena semua proses mendapat jatah CPU secara bergilir.
+
+   Pengaruh time quantum apabila time quantum kecil overhead tinggi karena waiting timenya cenderung besar, sedangkan time quantum besar WT dan TAT membaik, tetapi fairness menurun. Dapat disimpulkan : 
+
+   Quantum kecil = responsivitas tinggi tetapi waiting time lebih buruk
+
+   Quantum besar = perfoma batch lebih baik tetapi fairness menurun.
+
+   Pengaruh penggunaan priority yaitu proses prioritas tinggi selesai lebih cepat meskipun datang terakhir.
+
 4. Simpan semua bukti (tabel, grafik, atau gambar) ke folder `screenshots/`.  
 
 ### Quiz
