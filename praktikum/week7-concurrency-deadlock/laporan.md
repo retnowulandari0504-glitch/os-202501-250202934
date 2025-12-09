@@ -4,8 +4,10 @@ Topik: Sinkronisasi Proses dan Masalah Deadlock
 ---
 
 ## Identitas
-- **Nama**  : [Dyah Retno Wulandari]  
-- **NIM**   : [250202934]  
+- **Nama**  : 
+   1. Latifah Risti Anggraeni (250202945) / [Ketua & Analisis]
+   2. Nisa'ul Hidayah (250202981) / [Simulasi]
+   3. Dyah Retno Wulandari (250202934) / [Bagian Dokumentasi]
 - **Kelas** : [1IKRB]
 
 ---
@@ -60,21 +62,68 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
      - Mengatur urutan pengambilan garpu (misal, filosof terakhir mengambil secara terbalik).  
    - Analisis hasil modifikasi dan buktikan bahwa deadlock telah dihindari.
 
+   **Jawab :** 
+
+   Modifikasi yang memperkenalkan room_controller (Semaphore dengan nilai $N-1$, yaitu 4) berhasil mencegah deadlock secara efektif.
+
+   Mekanisme PencegahanPembatasan Akses: Semaphore (room_controller) bertindak sebagai pelayan yang membatasi hanya maksimal 4 filsuf yang boleh berada di meja (mencoba mengambil garpu) secara bersamaan
+
+   Pemecah Siklus (Circular Wait): Dengan hanya mengizinkan $N-1$ filsuf untuk mencoba makan, selalu ada setidaknya satu garpu bebas yang tidak dapat ditahan oleh semua filsuf secara kolektif.
+
+   Jaminan Kemajuan: Keterbatasan ini menjamin bahwa filsuf terakhir yang masuk (misalnya $P_3$, jika 4 filsuf sudah masuk) pasti dapat mengambil kedua garpunya ($F_3$ dan $F_4$ dalam contoh ini) tanpa menunggu garpu yang ditahan oleh filsuf lain. 
+
+   Setelah filsuf ini selesai, ia melepaskan garpu, memecah rantai tunggu yang ada, dan memungkinkan filsuf lain untuk melanjutkan. Dengan demikian, kondisi Circular Wait dihilangkan, yang merupakan syarat mutlak untuk mencegah deadlock.
+
 4. **Eksperimen 3 – Analisis Deadlock**
    - Jelaskan empat kondisi deadlock dari versi pertama dan bagaimana kondisi tersebut dipecahkan pada versi fixed.  
+         Jawab : Empat kondisi deadlock pada eksperimen pertama
+
+   1. Mutual Exclusion (Mutual Eksklusif)
+Setiap garpu hanya bisa dipakai oleh satu filsuf pada satu waktu.
+Pada versi pertama, lock membuat garpu hanya dimiliki satu thread.
+
+   2. Hold and Wait
+Setiap filsuf memegang satu garpu kiri dan kemudian menunggu garpu kanan.
+Semua filsuf memegang garpu kiri dan sama-sama menunggu garpu kanan(terjebak).
+
+   3. No Preemption (Tidak Bisa Dipaksa Lepas)
+Lock tidak bisa dicabut paksa, jika filsuf menunggu, dia harus menunggu sampai garpu dilepas.
+Tidak ada mekanisme untuk memaksa seorang filsuf melepaskan garpu.
+
+   4. Circular Wait (Menunggu Secara Melingkar)
+
+   filsuf 0 menunggu garpu 1,
+
+   filsuf 1 menunggu garpu 2,
+
+   filsuf 4 menunggu garpu 0.
+Terjadi rantai menunggu melingkar sehingga semua macet.
+
+   Pada versi fixed menggunakan semaphore(4) untuk membatasi bahwa hanya 4 filsuf yang boleh mencoba makan pada waktu yang sama.
+
    - Sajikan hasil analisis dalam tabel seperti contoh berikut:
 
      | Kondisi Deadlock | Terjadi di Versi Deadlock | Solusi di Versi Fixed |
      |------------------|---------------------------|------------------------|
-     | Mutual Exclusion | Ya (satu garpu hanya satu proses) | Gunakan semaphore untuk kontrol akses |
-     | Hold and Wait | Ya | Hindari proses menahan lebih dari satu sumber daya |
-     | No Preemption | Ya | Tidak ada mekanisme pelepasan paksa |
-     | Circular Wait | Ya | Ubah urutan pengambilan sumber daya |
+     | Mutual Exclusion | Ya. (Garpu hanya dapat digunakan 1 filsut dalam satu waktu.) | Tetap ada (mutual exclusion tidak dihilangkan). Namun dikontrol melalui semaphore pada setiap garpu untuk akses aman |
+     | Hold and Wait | Ya. Filsuf memegang 1 garpu (hold) dan menunggu garpu lainnya (menunggu). | Dibatasi dengan semaphore room = 4 sehingga tidak semua filsuf bisa menunggu secara bersamaan → kondisi hold-and-wait penuh tidak terjadi. |
+     | No Preemption | Ya. Garpu tidak bisa direbut paksa, hanya dilepas saat selesai makan. |Tetap. Tidak ada preemption. Namun tidak menyebabkan deadlock karena kondisi circular wait dihilangkan. |
+     | Circular Wait | Ya. Semua filsuf bisa membentuk siklus: P0 menunggu P1, …, P4 menunggu P0. | Dihilangkan melalui: 1) batasi maksimum 4 filsuf, atau 2) modifikasi urutan pengambilan (filsuf terakhir mengambil garpu secara terbalik), sehingga siklus tidak pernah terbentuk.|
+
+# Kesimpulan :
+
+   Pada versi fixed, strategi sinkronisasi ditambahkan dengan semaphore untuk membatasi jumlah filsuf (maks. 4) atau mengubah urutan pengambilan garpu (asymmetric order). Modifikasi ini menghilangkan kondisi Circular Wait, dan sekaligus mengurangi Hold and Wait penuh, sehingga rantai deadlock terputus.
 
 5. **Eksperimen 4 – Dokumentasi**
    - Simpan semua diagram, screenshot simulasi, dan hasil diskusi di:
      ```
      praktikum/week7-concurrency-deadlock/screenshots/
+Eksperimen 1
+   ![Screenshot hasil](screenshots/Eksperimen1.png)
+
+Eksperimen 2
+   ![Screenshot hasil](screenshots/Eksperimen2.png)
+
      ```
    - Tuliskan laporan kelompok di `laporan.md` (format IMRaD singkat: *Pendahuluan, Metode, Hasil, Analisis, Diskusi*).
 
