@@ -113,9 +113,6 @@ Terjadi rantai menunggu melingkar sehingga semua macet.
      | No Preemption | Ya. Garpu tidak bisa direbut paksa, hanya dilepas saat selesai makan. |Tetap. Tidak ada preemption. Namun tidak menyebabkan deadlock karena kondisi circular wait dihilangkan. |
      | Circular Wait | Ya. Semua filsuf bisa membentuk siklus: P0 menunggu P1, …, P4 menunggu P0. | Dihilangkan melalui: 1) batasi maksimum 4 filsuf, atau 2) modifikasi urutan pengambilan (filsuf terakhir mengambil garpu secara terbalik), sehingga siklus tidak pernah terbentuk.|
 
-# Kesimpulan :
-
-   Pada versi fixed, strategi sinkronisasi ditambahkan dengan semaphore untuk membatasi jumlah filsuf (maks. 4) atau mengubah urutan pengambilan garpu (asymmetric order). Modifikasi ini menghilangkan kondisi Circular Wait, dan sekaligus mengurangi Hold and Wait penuh, sehingga rantai deadlock terputus.
 
 5. **Eksperimen 4 – Dokumentasi**
    - Simpan semua diagram, screenshot simulasi, dan hasil diskusi di:
@@ -167,8 +164,11 @@ Tuliskan jawaban di bagian **Quiz** laporan:
    Jawab: 
    - Semaphore adalah variabel integer yang digunakan untuk mengontrol akses ke sumber daya bersama melalui operasi wait dan signal
    - Monitir adalahkonstruksi sinkronisasi tingkat tinggi yang mengelompokkan data bersama dan prosedur yang beroperasi, memastikan hanya satu proses yang aktif di dalam monitor pada satu waktu.
-
 ---
+
+# Kesimpulan :
+
+   Pada versi fixed, strategi sinkronisasi ditambahkan dengan semaphore untuk membatasi jumlah filsuf (maks. 4) atau mengubah urutan pengambilan garpu (asymmetric order). Modifikasi ini menghilangkan kondisi Circular Wait, dan sekaligus mengurangi Hold and Wait penuh, sehingga rantai deadlock terputus.
 
 ## E. Output yang Diharapkan
 - Laporan analisis kelompok dalam `laporan.md`.  
