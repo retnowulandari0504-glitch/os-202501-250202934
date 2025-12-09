@@ -5,9 +5,12 @@ Topik: Sinkronisasi Proses dan Masalah Deadlock
 
 ## Identitas
 - **Nama**  : 
-   1. Latifah Risti Anggraeni (250202945) / [Ketua & Analisis]
-   2. Nisa'ul Hidayah (250202981) / [Simulasi]
-   3. Dyah Retno Wulandari (250202934) / [Bagian Dokumentasi]
+
+1. Latifah Risti Anggraeni (250202945) / [Ketua & Analisis]
+
+2. Nisa'ul Hidayah (250202981) / [Simulasi]
+
+3. Dyah Retno Wulandari (250202934) / [Bagian Dokumentasi]
 - **Kelas** : [1IKRB]
 
 ---
@@ -92,11 +95,11 @@ Tidak ada mekanisme untuk memaksa seorang filsuf melepaskan garpu.
 
    4. Circular Wait (Menunggu Secara Melingkar)
 
-   filsuf 0 menunggu garpu 1,
+      filsuf 0 menunggu garpu 1,
 
-   filsuf 1 menunggu garpu 2,
+      filsuf 1 menunggu garpu 2,
 
-   filsuf 4 menunggu garpu 0.
+      filsuf 4 menunggu garpu 0.
 Terjadi rantai menunggu melingkar sehingga semua macet.
 
    Pada versi fixed menggunakan semaphore(4) untuk membatasi bahwa hanya 4 filsuf yang boleh mencoba makan pada waktu yang sama.
