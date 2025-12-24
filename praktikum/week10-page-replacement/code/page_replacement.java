@@ -30,9 +30,9 @@ public class page_replacement {
 
                 frames.add(page);
                 queue.add(page);
-                System.out.println("Page " + page + " → FAULT " + frames);
+                System.out.println("Page " + page + " => FAULT " + frames);
             } else {
-                System.out.println("Page " + page + " → HIT   " + frames);
+                System.out.println("Page " + page + " => HIT   " + frames);
             }
         }
 
