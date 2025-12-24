@@ -2,6 +2,11 @@
 Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
 
 ---
+## Identitas
+- **Nama**  : [Dyah Retno Wulandari]  
+- **NIM**   : [250202934]  
+- **Kelas** : [1IKRB]
+
 
 ## A. Deskripsi Singkat
 Pada praktikum minggu ini, mahasiswa akan mempelajari **manajemen memori virtual**, khususnya mekanisme **page replacement**.  
@@ -66,6 +71,10 @@ praktikum/week10-page-replacement/
    - Pastikan hasil simulasi logis dan konsisten.
    - Simpan screenshot hasil eksekusi.
 
+   ![Hasil Simulasi](screenshots/hasil_simulasi.png)
+
+
+
 5. **Analisis Perbandingan**
 
    Buat tabel perbandingan seperti berikut:
@@ -77,6 +86,8 @@ praktikum/week10-page-replacement/
 
 
    - Jelaskan mengapa jumlah *page fault* bisa berbeda.
+
+   Jawab: Jumlah page fault bisa berbeda karena cara tiap algoritma menentukan halaman mana yang harus diganti saat memori penuh.
    - Analisis algoritma mana yang lebih efisien dan alasannya.
 
 6. **Commit & Push**
@@ -99,8 +110,17 @@ praktikum/week10-page-replacement/
 ### Quiz
 Jawab pada bagian **Quiz** di laporan:
 1. Apa perbedaan utama FIFO dan LRU?
+
+Jawab : 
+-	FIFO (First in First Out) waktu kedatangan halaman sederhana atau berdasarkan antrian, mengimplementasikannya mudah, kinerjanya buruk, dan akurasi terhadap perilaku program rendah
+-	LRO (Least Recently Used) Riwayat penggunaan halaman kompleks (waktu akses terakhir), mengimplementasikannya lebih sulit, kinerja umunya lebih baik dan akurasi terhadap perilaku program tinggi
 2. Mengapa FIFO dapat menghasilkan *Belady’s Anomaly*?
+
+Jawab : karena keputusan penggantian halaman hanya berdasarkan urutan kedatangan, bukan pada seberapa sering atau seberapa baru halaman tersebut digunakan serta sensitive terhadap perubahan jumlah frame.
+
 3. Mengapa LRU umumnya menghasilkan performa lebih baik dibanding FIFO?
+
+Jawab: Karena LRU mengikuti perilaku nyata program, menjaga halaman yang masih relevan, menghasilkan pengguna memori yang lebih efisien
 
 ---
 
