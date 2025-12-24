@@ -71,7 +71,7 @@ praktikum/week10-page-replacement/
    - Pastikan hasil simulasi logis dan konsisten.
    - Simpan screenshot hasil eksekusi.
 
-   ![Hasil Simulasi](screenshots/hasil_simulasi.png)
+    ![Hasil Simulasi](screenshots/hasil_simulasi.png)
 
 
 
