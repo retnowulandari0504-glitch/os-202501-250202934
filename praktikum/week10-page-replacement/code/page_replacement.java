@@ -58,8 +58,8 @@ public class page_replacement {
             }
 
             frames.add(page);
-            System.out.println("Page " + page + " → " +
-                    (frames.contains(page) && frames.size() <= frameSize => "HIT   " : "FAULT ") + frames);
+            System.out.println("Page " + page + " => " +
+                    (frames.contains(page) && frames.size() <= frameSize ? "HIT   " : "FAULT ") + frames);
         }
 
         System.out.println("\nTotal Page Fault LRU: " + fault);
