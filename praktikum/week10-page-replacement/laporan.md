@@ -81,8 +81,8 @@ praktikum/week10-page-replacement/
 
    | Algoritma | Jumlah Page Fault | Keterangan |
    |:--|:--:|:--|
-   | FIFO | ... | ... |
-   | LRU | ... | ... |
+   | FIFO | 10 | Tidak mempertimbangkan pola penggunaan halaman sehingga halaman yang sering dipake harus diganti lebih awal |
+   | LRU | 9 | Mempertimbangkan halaman yang paling lama tidak digunakan, sehingga penggunaan halaman lebih efisien |
 
 
    - Jelaskan mengapa jumlah *page fault* bisa berbeda.
