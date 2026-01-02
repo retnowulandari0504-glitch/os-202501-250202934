@@ -1,5 +1,5 @@
-public class deadlock_detection {
-    public static void main(String[] args) {
-        System.out.println("Deadlock Detection OK");
-    }
-}
+| Proses | Allocation | Request |
+| ------ | ---------- | ------- |
+| P1     | R1         | R2      |
+| P2     | R2         | R3      |
+| P3     | R3         | R1      |
