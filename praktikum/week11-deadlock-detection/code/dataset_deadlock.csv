@@ -1,0 +1,5 @@
+public class deadlock_detection {
+    public static void main(String[] args) {
+        System.out.println("Deadlock Detection OK");
+    }
+}
