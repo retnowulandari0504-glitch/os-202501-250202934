@@ -82,7 +82,7 @@ praktikum/week11-deadlock-detection/
 5. **Commit & Push**
 
    ```bash
-   git add .
+   git add 
    git commit -m "Minggu 11 - Deadlock Detection"
    git push origin main
    ```
