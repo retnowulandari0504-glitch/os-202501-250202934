@@ -1,55 +1,52 @@
-import java.io.*;
 import java.util.*;
 
 public class deadlock_detection {
 
-    static Map<String, List<String>> graph = new HashMap<>();
-    static Set<String> visited = new HashSet<>();
-    static Set<String> stack = new HashSet<>();
-    static boolean deadlock = false;
+    static int n = 3; // jumlah proses
+    static int[] allocation = {0, 1, 2}; // resource yang dipegang
+    static int[] request = {1, 2, 0};    // resource yang diminta
+
+    static boolean[] visited = new boolean[n];
+    static boolean[] stack = new boolean[n];
 
     public static void main(String[] args) {
-        String file = "dataset_deadlock.csv";
+        boolean deadlock = false;
 
-        loadCSV(file);
-
-        for (String process : graph.keySet()) {
-            if (!visited.contains(process)) {
-                dfs(process);
+        for (int i = 0; i < n; i++) {
+            if (detectCycle(i)) {
+                deadlock = true;
+                break;
             }
         }
 
         if (deadlock) {
-            System.out.println("❌ DEADLOCK TERDETEKSI!");
+            System.out.println("⚠ SISTEM MENGALAMI DEADLOCK");
+            System.out.println("Proses yang terlibat deadlock:");
+
+            for (int i = 0; i < n; i++) {
+                if (stack[i]) {
+                    System.out.println("P" + (i + 1));
+                }
+            }
         } else {
-            System.out.println("✅ TIDAK ADA DEADLOCK");
+            System.out.println("✅ SISTEM AMAN (TIDAK DEADLOCK)");
         }
     }
 
-    static void loadCSV(String file) {
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
-                graph.putIfAbsent(data[0], new ArrayList<>());
-                graph.get(data[0]).add(data[1]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    static boolean detectCycle(int p) {
+        if (stack[p]) return true;
+        if (visited[p]) return false;
 
-    static void dfs(String process) {
-        visited.add(process);
-        stack.add(process);
+        visited[p] = true;
+        stack[p] = true;
 
-        for (String neighbor : graph.getOrDefault(process, new ArrayList<>())) {
-            if (!visited.contains(neighbor)) {
-                dfs(neighbor);
-            } else if (stack.contains(neighbor)) {
-                deadlock = true;
+        for (int i = 0; i < n; i++) {
+            if (allocation[i] == request[p]) {
+                if (detectCycle(i)) return true;
             }
         }
-        stack.remove(process);
+
+        stack[p] = false;
+        return false;
     }
 }
