@@ -87,17 +87,19 @@ praktikum/week11-deadlock-detection/
    - Jelaskan mengapa deadlock terjadi atau tidak terjadi.  
    Jawab : *Kasus Deadlock*
 
-   Deadlock terjadi karena setiap proses memegang minimal satu resource dan menunggu resource lain yang sedang dipegang proses lain, sehingga tidak ada proses yang bisa lanjut.
+     Deadlock terjadi karena setiap proses memegang minimal satu resource  dan menunggu resource lain yang sedang dipegang proses lain, sehingga tidak ada proses yang bisa lanjut.
 
-*Kasus Tidak Deadlock*
-Tidak terjadi deadlock karena:
+        *Kasus Tidak Deadlock*
 
-Ada proses yang dapat menyelesaikan eksekusi dan melepas resource
+        Tidak terjadi deadlock karena:
 
-Tidak terbentuk siklus tunggu (no circular wait)
+        Ada proses yang dapat menyelesaikan eksekusi dan melepas resource
+
+        Tidak terbentuk siklus tunggu (no circular wait)
+
    - Kaitkan hasil dengan teori deadlock (empat kondisi).
 
-   Jawab : Deadlock terjadi karena empat kondisi deadlock terpenuhi :
+        Jawab : Deadlock terjadi karena empat kondisi deadlock terpenuhi :
    1. Mutual Exclusion
 
       Resource hanya bisa digunakan satu proses dalam satu waktu.
@@ -114,111 +116,111 @@ Tidak terbentuk siklus tunggu (no circular wait)
 
       Terdapat siklus proses yang saling menunggu resource.
 
-   import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.*;
 
-public class deadlock_detection {
+                    import java.io.BufferedReader;
+                    import java.io.FileReader;
+                    import java.io.IOException;
+                    import java.util.*;
 
-    public static void main(String[] args) {
+                    public class deadlock_detection {
 
-        String fileName = "dataset_deadlock.csv";
+            public static void main(String[] args) {
 
-        // Menyimpan data allocation dan request
-        Map<String, String> allocation = new HashMap<>();
-        Map<String, String> request = new HashMap<>();
-        List<String> processes = new ArrayList<>();
+                String fileName = "dataset_deadlock.csv";
 
-        // ===== 1. MEMBACA DATA PROSES & RESOURCE =====
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            br.readLine(); // lewati header
+                // Menyimpan data allocation dan request
+                Map<String, String> allocation = new HashMap<>();
+                Map<String, String> request = new HashMap<>();
+                List<String> processes = new ArrayList<>();
 
-            while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
+                // ===== 1. MEMBACA DATA PROSES & RESOURCE =====
+                try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+                    String line;
+                    br.readLine(); // lewati header
 
-                String process = data[0];
-                String alloc = data[1];
-                String req = data[2];
+                    while ((line = br.readLine()) != null) {
+                        String[] data = line.split(",");
 
-                processes.add(process);
-                allocation.put(process, alloc);
-                request.put(process, req);
-            }
-        } catch (IOException e) {
-            System.out.println("Gagal membaca file dataset!");
-            return;
-        }
+                        String process = data[0];
+                        String alloc = data[1];
+                        String req = data[2];
 
-        // ===== 2. MEMBANGUN WAIT-FOR GRAPH =====
-        Map<String, List<String>> waitForGraph = new HashMap<>();
+                        processes.add(process);
+                        allocation.put(process, alloc);
+                        request.put(process, req);
+                    }
+                } catch (IOException e) {
+                    System.out.println("Gagal membaca file dataset!");
+                    return;
+                }
 
-        for (String p1 : processes) {
-            waitForGraph.put(p1, new ArrayList<>());
-            for (String p2 : processes) {
-                if (!p1.equals(p2)) {
-                    if (request.get(p1).equals(allocation.get(p2))) {
-                        waitForGraph.get(p1).add(p2);
+                // ===== 2. MEMBANGUN WAIT-FOR GRAPH =====
+                Map<String, List<String>> waitForGraph = new HashMap<>();
+
+                for (String p1 : processes) {
+                    waitForGraph.put(p1, new ArrayList<>());
+                    for (String p2 : processes) {
+                        if (!p1.equals(p2)) {
+                            if (request.get(p1).equals(allocation.get(p2))) {
+                                waitForGraph.get(p1).add(p2);
+                            }
+                        }
                     }
                 }
-            }
-        }
 
-        // ===== 3. DETEKSI DEADLOCK =====
-        Set<String> visited = new HashSet<>();
-        Set<String> stack = new HashSet<>();
-        Set<String> deadlockProcesses = new HashSet<>();
+                // ===== 3. DETEKSI DEADLOCK =====
+                Set<String> visited = new HashSet<>();
+                Set<String> stack = new HashSet<>();
+                Set<String> deadlockProcesses = new HashSet<>();
 
-        for (String process : processes) {
-            if (!visited.contains(process)) {
-                dfs(process, waitForGraph, visited, stack, deadlockProcesses);
-            }
-        }
-
-        // ===== 4. OUTPUT =====
-        if (!deadlockProcesses.isEmpty()) {
-            System.out.println("Sistem dalam keadaan deadlock!");
-            System.out.println("Proses yang terlibat:");
-            for (String p : deadlockProcesses) {
-                System.out.println(p);
-            }
-        } else {
-            System.out.println("Tidak terjadi deadlock.");
-        }
-    }
-
-    // DFS untuk mendeteksi cycle
-    private static boolean dfs(
-            String process,
-            Map<String, List<String>> graph,
-            Set<String> visited,
-            Set<String> stack,
-            Set<String> deadlockProcesses) {
-
-        visited.add(process);
-        stack.add(process);
-
-        for (String neighbor : graph.get(process)) {
-            if (!visited.contains(neighbor)) {
-                if (dfs(neighbor, graph, visited, stack, deadlockProcesses)) {
-                    deadlockProcesses.add(process);
-                    return true;
+                for (String process : processes) {
+                    if (!visited.contains(process)) {
+                        dfs(process, waitForGraph, visited, stack, deadlockProcesses);
+                    }
                 }
-            } else if (stack.contains(neighbor)) {
-                deadlockProcesses.add(process);
-                deadlockProcesses.add(neighbor);
-                return true;
+
+                // ===== 4. OUTPUT =====
+                if (!deadlockProcesses.isEmpty()) {
+                    System.out.println("Sistem dalam keadaan deadlock!");
+                    System.out.println("Proses yang terlibat:");
+                    for (String p : deadlockProcesses) {
+                        System.out.println(p);
+                    }
+                } else {
+                    System.out.println("Tidak terjadi deadlock.");
+                }
             }
-        }
 
-        stack.remove(process);
-        return false;
-    }
-}
+            // DFS untuk mendeteksi cycle
+            private static boolean dfs(
+                    String process,
+                    Map<String, List<String>> graph,
+                    Set<String> visited,
+                    Set<String> stack,
+                    Set<String> deadlockProcesses) {
 
+                visited.add(process);
+                stack.add(process);
 
-   ![Hasil Simulasi](screenshots/hasil_deteksi.png)
+                for (String neighbor : graph.get(process)) {
+                    if (!visited.contains(neighbor)) {
+                        if (dfs(neighbor, graph, visited, stack, deadlockProcesses)) {
+                            deadlockProcesses.add(process);
+                            return true;
+                        }
+                    } else if (stack.contains(neighbor)) {
+                        deadlockProcesses.add(process);
+                        deadlockProcesses.add(neighbor);
+                        return true;
+                    }
+                }
+
+                stack.remove(process);
+                return false;
+            }
+            }
+
+![Hasil Simulasi](screenshots/hasil_deteksi.png)
    
 5. **Commit & Push**
 
