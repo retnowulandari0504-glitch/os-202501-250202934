@@ -76,8 +76,44 @@ praktikum/week11-deadlock-detection/
 4. **Analisis Hasil**
 
    - Sajikan hasil deteksi dalam tabel (proses deadlock / tidak).  
+
+   | No | Proses Terlibat | Status | Keterangan |
+   |:--:|:--:|:--:|:--:|
+   | 1 | P1, P2, P3 | Deadlock | Terjadi circular wait|
+   | 2 | P1, P2 | Tidak Deadlock | Resource dapat dilepas|
+   | 3 | P2, P3, P4 | Deadlock | Saling menunggu resource|
+
+
    - Jelaskan mengapa deadlock terjadi atau tidak terjadi.  
+   Jawab : *Kasus Deadlock*
+
+   Deadlock terjadi karena setiap proses memegang minimal satu resource dan menunggu resource lain yang sedang dipegang proses lain, sehingga tidak ada proses yang bisa lanjut.
+
+*Kasus Tidak Deadlock*
+Tidak terjadi deadlock karena:
+
+Ada proses yang dapat menyelesaikan eksekusi dan melepas resource
+
+Tidak terbentuk siklus tunggu (no circular wait)
    - Kaitkan hasil dengan teori deadlock (empat kondisi).
+
+   Jawab : Deadlock terjadi karena empat kondisi deadlock terpenuhi :
+   1. Mutual Exclusion
+
+      Resource hanya bisa digunakan satu proses dalam satu waktu.
+
+   2. Hold and Wait
+
+      Proses memegang resource sambil menunggu resource lain.
+
+   3. No Preemption
+
+      Resource tidak bisa diambil paksa dari proses.
+
+   4. Circular Wait
+   
+      Terdapat siklus proses yang saling menunggu resource.
+
 
 5. **Commit & Push**
 
@@ -118,7 +154,7 @@ Jawab: Deadlock diperlukan karena :
 
 3. Apa kelebihan dan kekurangan pendekatan deteksi deadlock?
 
-Kelebihan :
+   Kelebihan :
 
 
    a.	 Pemanfaatan resource maksimal
@@ -129,7 +165,7 @@ Kelebihan :
 
    d.	Tidak menyebabkan starvation sejak awal proses
 
-Kekurangan :
+   Kekurangan :
 
    
    a.	Deadlock sudah terjadi saat terdeteksi
