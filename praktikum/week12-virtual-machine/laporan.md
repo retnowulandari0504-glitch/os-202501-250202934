@@ -2,6 +2,11 @@
 Topik: Virtualisasi Menggunakan Virtual Machine  
 
 ---
+## Identitas
+- **Nama**  : 
+   1. Dyah Retno Wulandari (250202934)
+   2. Erlin Dwi Cahyanti (250202911) 
+- **Kelas** : [1IKRB]
 
 ## A. Deskripsi Singkat
 Pada praktikum minggu ini, mahasiswa akan mempelajari konsep **virtualisasi sistem operasi** dengan menggunakan **Virtual Machine (VM)**.  
@@ -37,9 +42,6 @@ praktikum/week12-virtual-machine/
 │  └─ os_guest_running.png
 └─ laporan.md
 ```
-
----
-
 ## D. Langkah Pengerjaan
 1. **Instalasi Virtual Machine**
    - Instal VirtualBox atau VMware pada komputer host.  
@@ -67,6 +69,12 @@ praktikum/week12-virtual-machine/
 6. **Dokumentasi**
    - Ambil screenshot setiap tahap penting.  
    - Simpan di folder `screenshots/`.
+
+   ![Hasil Simulasi](screenshots/instalasi_vm.png)
+
+   ![Hasil Simulasi](screenshots/os_guest_running.png)
+
+   ![Hasil Simulasi](screenshots/konfigurasi_resource.png)
 
 7. **Commit & Push**
    ```bash
