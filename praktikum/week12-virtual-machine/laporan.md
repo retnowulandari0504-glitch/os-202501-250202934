@@ -4,8 +4,9 @@ Topik: Virtualisasi Menggunakan Virtual Machine
 ---
 ## Identitas
 - **Nama**  : 
-   1. Dyah Retno Wulandari (250202934)
-   2. Erlin Dwi Cahyanti (250202911) 
+1. Dyah Retno Wulandari (250202934)
+
+2. Erlin Dwi Cahyanti (250202911) 
 - **Kelas** : [1IKRB]
 
 ## A. Deskripsi Singkat
