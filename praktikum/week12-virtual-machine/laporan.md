@@ -69,7 +69,7 @@ praktikum/week12-virtual-machine/
 
    - CPU: 1 core
 
-  -  RAM: 4096 MB
+   - RAM: 4096 MB
 
    - Storage : 25,00 GB
 
