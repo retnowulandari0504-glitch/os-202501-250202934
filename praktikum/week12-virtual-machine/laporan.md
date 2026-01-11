@@ -62,18 +62,63 @@ praktikum/week12-virtual-machine/
    - Ubah konfigurasi CPU dan RAM.  
    - Amati perbedaan performa sebelum dan sesudah perubahan resource.
 
+**Jawab**
+   Perubahan konfigurasi:
+
+   Sebelum:
+
+   CPU: 1 core
+
+   RAM: 1024 MB
+
+   Sesudah:
+
+   CPU: 2 core
+
+   RAM: 2048 MB
+
+   Hasil pengamatan:
+
+   - Sebelum perubahan, proses booting Ubuntu terasa lebih lambat dan membuka aplikasi membutuhkan waktu lebih lama.
+
+   - Setelah CPU dan RAM ditingkatkan, sistem berjalan lebih responsif, waktu booting lebih singkat, serta aplikasi dapat dibuka dengan lebih cepat dan stabil.
+
+
 5. **Analisis Proteksi OS**
    - Jelaskan bagaimana VM menyediakan isolasi antara host dan guest.  
    - Kaitkan dengan konsep *sandboxing* dan *hardening* OS.
+   
+   **Jawab:** Mesin virtual (VM) menyediakan isolasi antara host OS dan guest OS dengan cara menjalankan guest OS di atas lapisan virtualisasi (hypervisor). Guest OS tidak memiliki akses langsung ke perangkat keras host, melainkan melalui resource virtual yang dikendalikan oleh VirtualBox.
+
+   **Isolasi Host dan Guest**
+
+     - Kesalahan, crash, atau malware di guest OS tidak mempengaruhi host OS.
+
+   - Akses ke CPU, RAM, disk, dan jaringan dibatasi sesuai konfigurasi VM.
+
+   - Sistem file host tidak dapat diakses langsung tanpa fitur khusus seperti shared folder.
+
+   **Kaitan dengan Sandboxing**
+
+   - Virtual machine berperan sebagai sandbox, yaitu lingkungan terisolasi untuk menjalankan sistem atau aplikasi tanpa risiko langsung terhadap sistem utama. Hal ini sangat berguna untuk:
+
+   - Uji coba sistem operasi
+
+   - Eksperimen konfigurasi
+
+   -  Praktikum dan simulasi
 
 6. **Dokumentasi**
    - Ambil screenshot setiap tahap penting.  
    - Simpan di folder `screenshots/`.
-
+   
+   **Instalasi_vm**
    ![Hasil Simulasi](screenshots/instalasi_vm.png)
 
+   **Os_guest_running**
    ![Hasil Simulasi](screenshots/os_guest_running.png)
 
+   **Konfigurasi_resource**
    ![Hasil Simulasi](screenshots/konfigurasi_resource.png)
 
 7. **Commit & Push**
@@ -95,8 +140,29 @@ praktikum/week12-virtual-machine/
 ### Quiz
 Jawab pada bagian **Quiz** di laporan:
 1. Apa perbedaan antara host OS dan guest OS?  
+Jawab : **Host OS** adalah sistem operasi utama yang terpasang langsung pada perangkat keras (hardware) komputer. Host OS berfungsi mengelola sumber daya fisik seperti CPU, RAM, storage, dan perangkat input/output, serta menjadi dasar untuk menjalankan software virtualisasi.
+
+   **Guest OS** adalah sistem operasi yang dijalankan di dalam lingkungan virtual (virtual machine) di atas host OS. Guest OS tidak berinteraksi langsung dengan hardware, melainkan melalui lapisan virtualisasi yang disediakan oleh hypervisor.
+
 2. Apa peran hypervisor dalam virtualisasi?  
+Jawab : Hypervisor adalah perangkat lunak (atau firmware) yang berfungsi untuk:
+
+   •	Membuat dan mengelola virtual machine (VM)
+
+   •	Membagi dan mengalokasikan sumber daya hardware (CPU, RAM, storage) ke setiap VM
+
+   •	Menjaga agar setiap VM (guest OS) berjalan secara terisolasi satu sama lain
+
 3. Mengapa virtualisasi meningkatkan keamanan sistem?  
+Jawab : Karena
+
+   •	Isolasi sistem: Jika satu guest OS terkena virus atau crash, guest OS lain dan host OS tetap aman.
+
+   •	Pembatasan akses hardware: Guest OS tidak memiliki akses langsung ke hardware, sehingga risiko kerusakan sistem lebih kecil.
+
+   •	Mudah melakukan pemulihan: Snapshot dan cloning VM memungkinkan sistem dikembalikan ke kondisi sebelumnya dengan cepat jika terjadi serangan atau kesalahan.
+
+   •	Lingkungan uji coba aman: Aplikasi berisiko dapat diuji di VM tanpa membahayakan sistem utama.
 
 ---
 
