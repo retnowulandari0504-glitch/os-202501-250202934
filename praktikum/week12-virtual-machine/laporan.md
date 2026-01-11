@@ -62,26 +62,31 @@ praktikum/week12-virtual-machine/
    - Ubah konfigurasi CPU dan RAM.  
    - Amati perbedaan performa sebelum dan sesudah perubahan resource.
 
-**Jawab**
    Perubahan konfigurasi:
 
-   Sebelum:
+   *Sebelum:*
 
-   CPU: 1 core
+   - CPU: 1 core
 
-   RAM: 1024 MB
+  -  RAM: 4096 MB
 
-   Sesudah:
+   - Storage : 25,00 GB
 
-   CPU: 2 core
+  ![Hasil Simulasi](screenshots/Sebelum.png)
 
-   RAM: 2048 MB
+   *Sesudah:*
 
-   Hasil pengamatan:
+   - CPU: 2 core
 
-   - Sebelum perubahan, proses booting Ubuntu terasa lebih lambat dan membuka aplikasi membutuhkan waktu lebih lama.
+   - RAM: 2048 MB
 
-   - Setelah CPU dan RAM ditingkatkan, sistem berjalan lebih responsif, waktu booting lebih singkat, serta aplikasi dapat dibuka dengan lebih cepat dan stabil.
+   - Storage : 25,00 GB (tidak berubah)
+   
+  ![Hasil Simulasi](screenshots/Sesudah.png)
+   
+   *Hasil pengamatan:*
+
+   Perubahan konfigurasi resource menunjukkan bahwa penambahan jumlah CPU core meningkatkan kemampuan pemrosesan sistem, namun pengurangan kapasitas RAM menyebabkan keterbatasan pada multitasking. Hal ini membuktikan bahwa performa mesin virtual sangat bergantung pada keseimbangan alokasi CPU dan memori.
 
 
 5. **Analisis Proteksi OS**
