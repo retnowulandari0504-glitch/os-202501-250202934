@@ -55,6 +55,7 @@ praktikum/week13-docker-resource-limit/
      docker version
      docker ps
      ```
+      ![Hasil Simulasi](screenshots/docker_version.png)
 
 2. **Membuat Aplikasi/Skrip Uji**
 
@@ -89,10 +90,15 @@ praktikum/week13-docker-resource-limit/
 6. **Monitoring Sederhana**
 
    - Jalankan container (tanpa `--rm` jika perlu) dan amati penggunaan resource:
+      ![Hasil Simulasi](screenshots/tanpa_rm2.png)
+
+
+      ![Hasil Simulasi](screenshots/tanpa_rm1.png)
      ```bash
      docker stats
      ```
    - Ambil screenshot output eksekusi dan/atau `docker stats`.
+![Hasil Simulasi](screenshots/monitoring_sederhana.png)
 
 7. **Commit & Push**
 
@@ -107,9 +113,41 @@ praktikum/week13-docker-resource-limit/
 ## E. Tugas & Quiz
 ### Tugas
 1. Buat Dockerfile sederhana dan program uji di folder `code/`.
+
+![Hasil Simulasi](screenshots/dockerfile_sederhana.png)
+
 2. Build image dan jalankan container **tanpa limit**.
+![Hasil Simulasi](screenshots/container_tanpa_limit.png)
+
 3. Jalankan container dengan limit **CPU** dan **memori**.
+![Hasil Simulasi](screenshots/container_dengan_%20limit.png)
+
 4. Sajikan hasil pengamatan dalam tabel/uraian singkat di `laporan.md`.
+
+Tabel Perbandingan Hasil
+<table>
+<th>
+<tr>
+<td>Kondisi</td>	
+<td>CPU</td>	
+<td>Memori</td>	
+<td>Perilaku Program</td>
+</tr>
+</th>
+<tr>
+<td>Tanpa Limit</td>	
+<td>Bebas</td>	
+<td>Bebas</td>
+<td>Berjalan cepat dan stabil</td>
+</tr>
+<tr>
+<td>Dengan Limit</td>	
+<td>±50%	</td>
+<td>256 MB </td>	
+<td>Lebih lambat, resource terbatas</td>
+</tr>
+</table>
+
 
 ### Quiz
 Jawab pada bagian **Quiz** di laporan:
