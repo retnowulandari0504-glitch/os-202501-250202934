@@ -207,7 +207,7 @@ docker run -it mini-os-kelompok
 
 1. Hasil Docker
 
-    ![Screenshot hasil](./screenshots/.png)
+  ![Screenshot hasil](./screenshots/.png)
 
 2. Hasil Simulasi
 
