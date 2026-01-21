@@ -127,7 +127,6 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
   7. Dokumentasi Hasil: Mengambil screenshot seluruh hasil eksekusi terminal dan menyusunnya ke dalam laporan praktikum akhir.
 
 ---
-
 ## 3. Hasil Eksekusi
 
 ## A. Output Modudl Secheduling (FCFS)
