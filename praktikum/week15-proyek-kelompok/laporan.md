@@ -200,7 +200,7 @@ docker run -it mini-os-kelompok
 
 2. Hasil Simulasi
 
-   ![Screenshot hasil](./screenshots/hasil_simulasi.png)
+  ![Screenshot hasil](./screenshots/hasil_simulasi.png)
 
 3. Tabel Perhitungan CPU Secheduling
 
