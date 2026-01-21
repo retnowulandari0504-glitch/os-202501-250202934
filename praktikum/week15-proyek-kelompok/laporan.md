@@ -196,15 +196,15 @@ docker run -it mini-os-kelompok
 
 1. Hasil Docker
 
-  ![Screenshot hasil](./screenshots/hasil_dockerfile.jpeg)
+  ![Screenshot hasil](./screenshots/hasil_dockerfile.png)
 
 2. Hasil Simulasi
 
-   ![Screenshot hasil](./screenshots/hasil_simulasi.jpeg)
+   ![Screenshot hasil](./screenshots/hasil_simulasi.png)
 
 3. Tabel Perhitungan CPU Secheduling
 
-   ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.jpeg)
+   ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.png)
    
 ---
 
