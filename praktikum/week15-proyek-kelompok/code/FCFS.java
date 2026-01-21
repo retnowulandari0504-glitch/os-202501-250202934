@@ -1,39 +1,74 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class FCFS {
+
+    static class Process {
+        String id;
+        int arrivalTime;
+        int burstTime;
+        int waitingTime;
+        int turnaroundTime;
+
+        Process(String id, int arrivalTime, int burstTime) {
+            this.id = id;
+            this.arrivalTime = arrivalTime;
+            this.burstTime = burstTime;
+        }
+    }
+
     public static void run() {
-        List<Process> list = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("data/proses.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] d = line.split(",");
-                list.add(new Process(d[0], Integer.parseInt(d[1].trim()), Integer.parseInt(d[2].trim())));
+        ArrayList<Process> processes = new ArrayList<>();
+
+        try {
+            File file = new File("data/proses.csv");
+            Scanner sc = new Scanner(file);
+
+            while (sc.hasNextLine()) {
+                String[] data = sc.nextLine().split(",");
+                processes.add(new Process(
+                        data[0],
+                        Integer.parseInt(data[1]),
+                        Integer.parseInt(data[2])
+                ));
             }
-        } catch (IOException e) {
-            System.out.println("Gagal baca data/proses.csv"); return;
+            sc.close();
+
+        } catch (Exception e) {
+            System.out.println("Gagal baca data/proses.csv");
+            return;
         }
 
         int currentTime = 0;
-        double totalTAT = 0, totalWT = 0;
+        double totalWT = 0, totalTAT = 0;
 
-        System.out.println("\n=================================================================");
-        System.out.printf("| %-10s | %-8s | %-8s | %-8s | %-8s | %-5s |\n", "PID", "Arrival", "Burst", "Finish", "TAT", "WT");
-        System.out.println("-----------------------------------------------------------------");
+        System.out.println("\n=== HASIL FCFS ===");
+        System.out.println("Proses | AT | BT | WT | TAT");
+        System.out.println("-----------------------------");
 
-        for (Process p : list) {
-            if (currentTime < p.arrivalTime) currentTime = p.arrivalTime;
-            p.finishTime = currentTime + p.burstTime;
-            p.tat = p.finishTime - p.arrivalTime;
-            p.wt = p.tat - p.burstTime;
-            currentTime = p.finishTime;
+        for (Process p : processes) {
+            if (currentTime < p.arrivalTime) {
+                currentTime = p.arrivalTime;
+            }
 
-            totalTAT += p.tat;
-            totalWT += p.wt;
+            p.waitingTime = currentTime - p.arrivalTime;
+            p.turnaroundTime = p.waitingTime + p.burstTime;
 
-            System.out.printf("| %-10s | %-8d | %-8d | %-8d | %-8d | %-5d |\n", p.pid, p.arrivalTime, p.burstTime, p.finishTime, p.tat, p.wt);
+            currentTime += p.burstTime;
+
+            totalWT += p.waitingTime;
+            totalTAT += p.turnaroundTime;
+
+            System.out.printf(
+                "%5s | %2d | %2d | %2d | %3d\n",
+                p.id, p.arrivalTime, p.burstTime,
+                p.waitingTime, p.turnaroundTime
+            );
         }
-        System.out.println("=================================================================");
-        System.out.printf("Avg TAT: %.2f | Avg WT: %.2f\n", (totalTAT/list.size()), (totalWT/list.size()));
+
+        System.out.println("-----------------------------");
+        System.out.printf("Rata-rata WT  : %.2f\n", totalWT / processes.size());
+        System.out.printf("Rata-rata TAT : %.2f\n", totalTAT / processes.size());
     }
 }

@@ -132,18 +132,13 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 
 ## A. Output Modudl Secheduling (FCFS)
 
-=================================================================
-| PID | Arrival | Burst | Finish | TAT | WT |
+| PID| Arrival| Burst| Finish| TAT | WT         |
+| ---| -------|------|-------|-----|----------- |
+| P1 |     0  | 10   | 10    | 10  | 0          |
+| P2 |     2  | 5    | 15    | 13  | 8          |
+| P3 |     4  | 8    | 23    | 19  | 11         |
 
----
 
-| P1 | 0 | 10 | 10 | 10 | 0 |
-
-| P2 | 2 | 5 | 15 | 13 | 8 |
-
-| P3 | 4 | 8 | 23 | 19 | 11 |
-
-=================================================================
 Ringkasan Metrik:
 
 - Rata-rata Turnaround Time (Avg TAT): 14.00
@@ -151,17 +146,12 @@ Ringkasan Metrik:
 
 # B. Output Modul Page Replacement (FIFO):
 
-## | Ref Halaman | Status | Isi Frame |
-
-| 7 | FAULT | [7] |
-
-| 0 | FAULT | [7, 0] |
-
-| 1 | FAULT | [7, 0, 1] |
-
-| 2 | FAULT | [0, 1, 2] |
-
-=====================================================================
+| Ref Halaman| Status| Isi Frame| 
+| -----------| ------|----------|
+| 7          | FAULT | [7]      |
+| 0          | FAULT | [7,0]    |
+| 1          | FAULT | [7,0,1]  | 
+| 2          | FAULT | [0,1,2]  |
 
 - Total Page Fault : 4
 - Fault Rate (%) : 100.00% (pada 4 referensi pertama)
@@ -207,15 +197,15 @@ docker run -it mini-os-kelompok
 
 1. Hasil Docker
 
-  ![Screenshot hasil](./screenshots/.png)
+  ![Screenshot hasil](./screenshots/hasil_dockerfile.jpeg)
 
 2. Hasil Simulasi
 
-   ![Screenshot hasil](./screenshots/.png)
+   ![Screenshot hasil](./screenshots/hasil_simulasi.jpeg)
 
 3. Tabel Perhitungan CPU Secheduling
 
-   ![Screenshot hasil](./screenshots/.png)
+   ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.jpeg)
    
 ---
 
