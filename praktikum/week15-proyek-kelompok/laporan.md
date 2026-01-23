@@ -196,26 +196,27 @@ docker run -it mini-os-kelompok
 
 1. Hasil Docker
 
-  ![Screenshot hasil](./screenshots/hasil_dockerfile.png)
+  ![Screenshot hasil](./screenshots/hasil_dockerfile.jpeg)
 
 2. Hasil Simulasi
 
-  ![Screenshot hasil](./screenshots/hasil_simulasi.png)
+  ![Screenshot hasil](./screenshots/hasil_simulasi.jpeg)
 
 3. Tabel Perhitungan CPU Secheduling
 
-   ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.png)
+   ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.jpeg)
    
----
+4. Tabel Pembagian Tugas
+  ![Screenshot hasil](./screenshots/tabel_pembagian_tugas.jpeg)
 
 
 | Nama                 |    NIM    |    Peran tugas |
 | :------------------- | :-------: | -------------: |
-| Erlin Dwi Cahyanti   | 250202911 | Project Leader |
-| Ani Ngismatul Hawa   | 250202914 |    Developer 1 |
-| Dyah Retno wulandari | 250202934 |    Developer 2 |
-| Lutfi Khoerunnisa    | 250202947 |  Dokumentasi 1 |
-| Aster Rifani         | 250202915 |  Dokumentasi 2 |
+| Erlin Dwi Cahyanti   | 250202911 | **Project Leader** : Mengoordinasikan alur kerja Git kelompok dan melakukan kontrol penggabungan (merge). |
+| Ani Ngismatul Hawa   | 250202914 |    **Developer 1** : Mengerjakan modul CPU Scheduling (FCFS) dan dokumentasi terkait. |
+| Dyah Retno wulandari | 250202934 |    **Developer 2** : Mengerjakan modul Page Replacement (FIFO) dan integrasi laporan mingguan. |
+| Lutfi Khoerunnisa    | 250202947 |  **Dokumentasi 1** : Menyusun hasil eksekusi program dan tabel perhitungan. |
+| Aster Rifani         | 250202915 |  **Dokumentasi 2** : Mengelola struktur repositori dan pembaruan berkas README. |
 
 ---
 
