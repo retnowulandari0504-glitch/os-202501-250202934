@@ -207,20 +207,13 @@ docker run -it mini-os-kelompok
 
    ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.jpeg)
    
-4. Tabel Pembagian Tugas
-  ![Screenshot hasil](./screenshots/tabel_pembagian_tugas.jpeg)
+4. Tabel Repositori
+  ![Screenshot hasil](./screenshots/tabel_repositori.jpeg)
+
+5. Tabel Pembagian Tugas
+ ![Screenshot hasil](./screenshots/tabel_pembagian_tugas.jpeg)
 ```
 
-
-| Nama                 |    NIM    |    Peran tugas |
-| :------------------- | :-------: | -------------: |
-| Erlin Dwi Cahyanti   | 250202911 | **Project Leader** : Mengoordinasikan alur kerja Git kelompok dan melakukan kontrol penggabungan (merge). |
-| Ani Ngismatul Hawa   | 250202914 |    **Developer 1** : Mengerjakan modul CPU Scheduling (FCFS) dan dokumentasi terkait. |
-| Dyah Retno wulandari | 250202934 |    **Developer 2** : Mengerjakan modul Page Replacement (FIFO) dan integrasi laporan mingguan. |
-| Lutfi Khoerunnisa    | 250202947 |  **Dokumentasi 1** : Menyusun hasil eksekusi program dan tabel perhitungan. |
-| Aster Rifani         | 250202915 |  **Dokumentasi 2** : Mengelola struktur repositori dan pembaruan berkas README. |
-
----
 
 **Credit:**  
 _Template laporan praktikum Sistem Operasi (SO-202501) – Universitas Putra Bangsa_
