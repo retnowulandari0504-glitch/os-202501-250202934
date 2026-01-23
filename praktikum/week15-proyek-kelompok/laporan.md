@@ -62,7 +62,8 @@ Fungsi Utama:
 
   - Membaca data proses dari file process.csv
   - Mengurutkan proses sesuai algoritma yang dipilih
-  Menghitung: Waiting Time Turnaround Time Rata-rata Waiting Time Menampilkan hasil dalam bentuk tabel ASCII di terminal
+  - Menghitung: Waiting Time Turnaround Time Rata-rata Waiting Time   
+  - Menampilkan hasil dalam bentuk tabel ASCII di terminal.
 
   Input: Dataset proses (PID, Arrival Time, Burst Time)
 
