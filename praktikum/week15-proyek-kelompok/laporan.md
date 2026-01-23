@@ -62,7 +62,8 @@ Fungsi Utama:
 
   - Membaca data proses dari file process.csv
   - Mengurutkan proses sesuai algoritma yang dipilih
-  Menghitung: Waiting Time Turnaround Time Rata-rata Waiting Time Menampilkan hasil dalam bentuk tabel ASCII di terminal
+  - Menghitung: Waiting Time Turnaround Time Rata-rata Waiting Time   
+  - Menampilkan hasil dalam bentuk tabel ASCII di terminal.
 
   Input: Dataset proses (PID, Arrival Time, Burst Time)
 
@@ -127,23 +128,17 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
   7. Dokumentasi Hasil: Mengambil screenshot seluruh hasil eksekusi terminal dan menyusunnya ke dalam laporan praktikum akhir.
 
 ---
-
 ## 3. Hasil Eksekusi
 
 ## A. Output Modudl Secheduling (FCFS)
 
-=================================================================
-| PID | Arrival | Burst | Finish | TAT | WT |
+| PID| Arrival| Burst| Finish| TAT | WT         |
+| ---| -------|------|-------|-----|----------- |
+| P1 |     0  | 10   | 10    | 10  | 0          |
+| P2 |     2  | 5    | 15    | 13  | 8          |
+| P3 |     4  | 8    | 23    | 19  | 11         |
 
----
 
-| P1 | 0 | 10 | 10 | 10 | 0 |
-
-| P2 | 2 | 5 | 15 | 13 | 8 |
-
-| P3 | 4 | 8 | 23 | 19 | 11 |
-
-=================================================================
 Ringkasan Metrik:
 
 - Rata-rata Turnaround Time (Avg TAT): 14.00
@@ -151,17 +146,12 @@ Ringkasan Metrik:
 
 # B. Output Modul Page Replacement (FIFO):
 
-## | Ref Halaman | Status | Isi Frame |
-
-| 7 | FAULT | [7] |
-
-| 0 | FAULT | [7, 0] |
-
-| 1 | FAULT | [7, 0, 1] |
-
-| 2 | FAULT | [0, 1, 2] |
-
-=====================================================================
+| Ref Halaman| Status| Isi Frame| 
+| -----------| ------|----------|
+| 7          | FAULT | [7]      |
+| 0          | FAULT | [7,0]    |
+| 1          | FAULT | [7,0,1]  | 
+| 2          | FAULT | [0,1,2]  |
 
 - Total Page Fault : 4
 - Fault Rate (%) : 100.00% (pada 4 referensi pertama)
@@ -190,7 +180,7 @@ Ringkasan Metrik:
 
   2. Penggunaan Docker menjamin aplikasi bersifat portable dan reproducible, memudahkan kolaborasi antar anggota kelompok yang menggunakan sistem operasi berbeda.
 
-  3. Penggunaan Git dengan fitur branching mempermudah pembagian tugas antara pengembang modul scheduling dan paging tanpa menyebabkan konflik kode.
+  3. Penggunaan Git dengan fitur branching mempermudah pembagian tugas antara pengembang modul scheduling dan paging tanpa menyebabkan konflik kode. 
 
 ## 7. Langkah Praktikum (Perintah Docker)
 
@@ -207,26 +197,28 @@ docker run -it mini-os-kelompok
 
 1. Hasil Docker
 
-  ![Screenshot hasil](./screenshots/.png)
+  ![Screenshot hasil](./screenshots/hasil_dockerfile.jpeg)
 
 2. Hasil Simulasi
 
-   ![Screenshot hasil](./screenshots/.png)
+  ![Screenshot hasil](./screenshots/hasil_simulasi.jpeg)
 
 3. Tabel Perhitungan CPU Secheduling
 
-   ![Screenshot hasil](./screenshots/.png)
+   ![Screenshot hasil](./screenshots/tabel_perhitungan_scheduling.jpeg)
    
----
+4. Tabel Pembagian Tugas
+  ![Screenshot hasil](./screenshots/tabel_pembagian_tugas.jpeg)
+```
 
 
 | Nama                 |    NIM    |    Peran tugas |
 | :------------------- | :-------: | -------------: |
-| Erlin Dwi Cahyanti   | 250202911 | Project Leader |
-| Ani Ngismatul Hawa   | 250202914 |    Developer 1 |
-| Dyah Retno wulandari | 250202934 |    Developer 2 |
-| Lutfi Khoerunnisa    | 250202947 |  Dokumentasi 1 |
-| Aster Rifani         | 250202915 |  Dokumentasi 2 |
+| Erlin Dwi Cahyanti   | 250202911 | **Project Leader** : Mengoordinasikan alur kerja Git kelompok dan melakukan kontrol penggabungan (merge). |
+| Ani Ngismatul Hawa   | 250202914 |    **Developer 1** : Mengerjakan modul CPU Scheduling (FCFS) dan dokumentasi terkait. |
+| Dyah Retno wulandari | 250202934 |    **Developer 2** : Mengerjakan modul Page Replacement (FIFO) dan integrasi laporan mingguan. |
+| Lutfi Khoerunnisa    | 250202947 |  **Dokumentasi 1** : Menyusun hasil eksekusi program dan tabel perhitungan. |
+| Aster Rifani         | 250202915 |  **Dokumentasi 2** : Mengelola struktur repositori dan pembaruan berkas README. |
 
 ---
 
