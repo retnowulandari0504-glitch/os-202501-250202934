@@ -179,7 +179,7 @@ Ringkasan Metrik:
 
   2. Penggunaan Docker menjamin aplikasi bersifat portable dan reproducible, memudahkan kolaborasi antar anggota kelompok yang menggunakan sistem operasi berbeda.
 
-  3. Penggunaan Git dengan fitur branching mempermudah pembagian tugas antara pengembang modul scheduling dan paging tanpa menyebabkan konflik kode.
+  3. Penggunaan Git dengan fitur branching mempermudah pembagian tugas antara pengembang modul scheduling dan paging tanpa menyebabkan konflik kode. 
 
 ## 7. Langkah Praktikum (Perintah Docker)
 
@@ -208,6 +208,7 @@ docker run -it mini-os-kelompok
    
 4. Tabel Pembagian Tugas
   ![Screenshot hasil](./screenshots/tabel_pembagian_tugas.jpeg)
+```
 
 
 | Nama                 |    NIM    |    Peran tugas |
